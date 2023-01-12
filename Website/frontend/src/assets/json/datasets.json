@@ -1,0 +1,112 @@
+{
+  "Bacteroides theta RNA-seq": {
+    "label": "Bacteroides theta RNA-seq",
+    "options": [
+      {
+        "text": "Combined Dataset",
+        "value": {"filename": "b-theta-rna-seq_complete.csv", "seperator": "\t", "decimal_character": ".", "columns": [{"value": null, "text": "All columns"}, "Sequence name", "locus tag", "Name", "Start", "End", "Strand", "L Arabinose logFC", "D Maltose monohydrate logFC", "Mucin from porcine stomach logFC", "N Acetyl D Glucosamine logFC", "D Xylose logFC", "28°C logFC", "42°C logFC", "Aerobic shaking logFC", "bile salts logFC", "deoxycholic acid logFC", "Gentamicin logFC", "peroxide logFC", "pH 6 logFC", "Starvation logFC", "L Arabinose R1", "L Arabinose R2", "D Maltose monohydrate R1", "D Maltose monohydrate R2", "Mucin from porcine stomach R1", "Mucin from porcine stomach R2", "N Acetyl D Glucosamine R1", "N Acetyl D Glucosamine R2", "D Xylose R1", "D Xylose R2", "Glucose R1", "Glucose R2", "28°C R1", "28°C R2", "42°C R1", "42°C R2", "Aerobic shaking R1", "Aerobic shaking R2", "Bile salts R1", "Bile salts R2", "Deoxycholic acid R1", "Deoxycholic acid R2", "Gentamicin R1", "Gentamicin R2", "Peroxide R1", "Peroxide R2", "pH 6 R1", "pH 6 R2", "Starvation R1", "Starvation R2", "Control for TYG growth R1", "Control for TYG growth R2"], "pre_selected_columns": ["locus tag", "Name", "L Arabinose logFC", "D Maltose monohydrate logFC", "Mucin from porcine stomach logFC", "N Acetyl D Glucosamine logFC", "D Xylose logFC", "28°C logFC", "42°C logFC", "Aerobic shaking logFC", "bile salts logFC", "deoxycholic acid logFC", "Gentamicin logFC", "peroxide logFC", "pH 6 logFC", "Starvation logFC", "L Arabinose R1", "L Arabinose R2", "D Maltose monohydrate R1", "D Maltose monohydrate R2", "Mucin from porcine stomach R1", "Mucin from porcine stomach R2", "N Acetyl D Glucosamine R1", "N Acetyl D Glucosamine R2", "D Xylose R1", "D Xylose R2", "Glucose R1", "Glucose R2", "28°C R1", "28°C R2", "42°C R1", "42°C R2", "Aerobic shaking R1", "Aerobic shaking R2", "Bile salts R1", "Bile salts R2", "Deoxycholic acid R1", "Deoxycholic acid R2", "Gentamicin R1", "Gentamicin R2", "Peroxide R1", "Peroxide R2", "pH 6 R1", "pH 6 R2", "Starvation R1", "Starvation R2", "Control for TYG growth R1", "Control for TYG growth R2"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "CPM",
+        "value": {"filename": "b-theta-rna-seq_cpm.csv", "seperator": "\t", "decimal_character": ".", "columns": [{"value": null, "text": "All columns"}, "Sequence name", "locus tag", "Name", "Start", "End", "Strand", "L Arabinose R1", "L Arabinose R2", "D Maltose monohydrate R1", "D Maltose monohydrate R2", "Mucin from porcine stomach R1", "Mucin from porcine stomach R2", "N Acetyl D Glucosamine R1", "N Acetyl D Glucosamine R2", "D Xylose R1", "D Xylose R2", "Glucose R1", "Glucose R2", "28°C R1", "28°C R2", "42°C R1", "42°C R2", "Aerobic shaking R1", "Aerobic shaking R2", "Bile salts R1", "Bile salts R2", "Deoxycholic acid R1", "Deoxycholic acid R2", "Gentamicin R1", "Gentamicin R2", "Peroxide R1", "Peroxide R2", "pH 6 R1", "pH 6 R2", "Starvation R1", "Starvation R2", "Control for TYG growth R1", "Control for TYG growth R2"], "pre_selected_columns": ["locus tag", "Name", "L Arabinose R1", "L Arabinose R2", "D Maltose monohydrate R1", "D Maltose monohydrate R2", "Mucin from porcine stomach R1", "Mucin from porcine stomach R2", "N Acetyl D Glucosamine R1", "N Acetyl D Glucosamine R2", "D Xylose R1", "D Xylose R2", "Glucose R1", "Glucose R2", "28°C R1", "28°C R2", "42°C R1", "42°C R2", "Aerobic shaking R1", "Aerobic shaking R2", "Bile salts R1", "Bile salts R2", "Deoxycholic acid R1", "Deoxycholic acid R2", "Gentamicin R1", "Gentamicin R2", "Peroxide R1", "Peroxide R2", "pH 6 R1", "pH 6 R2", "Starvation R1", "Starvation R2", "Control for TYG growth R1", "Control for TYG growth R2"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "LogFC",
+        "value": {"filename": "b-theta-rna-seq_logfc.csv", "seperator": "\t", "decimal_character": ".", "columns": [{"value": null, "text": "All columns"}, "Sequence name", "locus tag", "Name", "Start", "End", "Strand", "L Arabinose logFC", "D Maltose monohydrate logFC", "Mucin from porcine stomach logFC", "N Acetyl D Glucosamine logFC", "D Xylose logFC", "28°C logFC", "42°C logFC", "Aerobic shaking logFC", "bile salts logFC", "deoxycholic acid logFC", "Gentamicin logFC", "peroxide logFC", "pH 6 logFC", "Starvation logFC"], "pre_selected_columns": ["locus tag", "Name", "L Arabinose logFC", "D Maltose monohydrate logFC", "Mucin from porcine stomach logFC", "N Acetyl D Glucosamine logFC", "D Xylose logFC", "28°C logFC", "42°C logFC", "Aerobic shaking logFC", "bile salts logFC", "deoxycholic acid logFC", "Gentamicin logFC", "peroxide logFC", "pH 6 logFC", "Starvation logFC"]},
+        "seperator": "\t"
+      }
+    ]
+  },
+  "SalCom Salmonella enterica Typhimurium Gene Expression Compendium": {
+    "label": "SalCom Salmonella enterica Typhimurium Gene Expression Compendium",
+    "options": [
+      {
+        "text": "Complete Dataset",
+        "value": {"filename": "salmonella-salcom_complete.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"},"locus_tag", "common gene name", "strand", "start", "end","EEP","MEP","LEP","ESP (biological replicate 1)","ESP (biological replicate 2)","ESP average (biological replicate 1 and 2)","LSP (biological replicate 1)","LSP (biological replicate 2)","LSP average (biological replicate 1 and 2)","25C","Cold shock (15C)","pH3 shock","pH5.8 shock","NaCl shock","Bile shock","LowFe2+ shock","Anaerobic shock","Anaerobic growth","Aerobic shock","InSPI2 (biological replicate 1)","InSPI2 (biological replicate 2)","InSPI2 average (biological replicate 1 and 2)","InSPI2 LowMg2+","Peroxide shock (InSPI2)","Nitric oxide shock (InSPI2)","NonSPI2","Temp10","Temp20","RNA pool"], "pre_selected_columns": ["locus_tag","common gene name","EEP","MEP","LEP","ESP average (biological replicate 1 and 2)","LSP average (biological replicate 1 and 2)","25C","Cold shock (15C)","pH3 shock","pH5.8 shock","NaCl shock","Bile shock","LowFe2+ shock","Anaerobic shock","Anaerobic growth","Aerobic shock","NonSPI2","InSPI2 average (biological replicate 1 and 2)","InSPI2 LowMg2+","Peroxide shock (InSPI2)","Nitric oxide shock (InSPI2)"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "Growth Curves",
+        "value": {"filename": "salmonella-salcom_growth-curves.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"},"locus_tag", "common gene name", "strand", "start", "end","EEP","MEP","LEP","ESP (biological replicate 1)","ESP (biological replicate 2)","ESP average (biological replicate 1 and 2)","LSP (biological replicate 1)","LSP (biological replicate 2)","LSP average (biological replicate 1 and 2)"], "pre_selected_columns": ["locus_tag","common gene name","EEP","MEP","LEP","ESP average (biological replicate 1 and 2)","LSP average (biological replicate 1 and 2)"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "25C",
+        "value": {"filename": "salmonella-salcom_25c.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"},"locus_tag", "common gene name", "25C", "strand","start", "end"], "pre_selected_columns": ["locus_tag","common gene name","25C"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "Environmental Shocks",
+        "value": {"filename": "salmonella-salcom_environmental-shocks.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"}, "locus_tag","common gene name","strand","start","end","MEP","Cold shock (15C)","pH3 shock","pH5.8 shock","NaCl shock","Bile shock","LowFe2+ shock","Anaerobic shock"], "pre_selected_columns": ["locus_tag","common gene name","MEP","Cold shock (15C)","pH3 shock","pH5.8 shock","NaCl shock","Bile shock","LowFe2+ shock","Anaerobic shock"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "Oxygen Shocks",
+        "value": {"filename": "salmonella-salcom_oxygen-shocks.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"}, "locus_tag", "common gene name", "strand", "start", "end","Anaerobic growth","Aerobic shock"], "pre_selected_columns": ["locus_tag","common gene name","Anaerobic growth","Aerobic shock"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "SPI2",
+        "value": {"filename": "salmonella-salcom_spi2.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"}, "locus_tag", "common gene name", "strand", "start", "end","NonSPI2","InSPI2 (biological replicate 1)","InSPI2 (biological replicate 2)","InSPI2 average (biological replicate 1 and 2)","InSPI2 LowMg2+","Peroxide shock (InSPI2)","Nitric oxide shock (InSPI2)"], "pre_selected_columns": ["locus_tag","common gene name","NonSPI2","InSPI2 average (biological replicate 1 and 2)","InSPI2 LowMg2+","Peroxide shock (InSPI2)","Nitric oxide shock (InSPI2)"]},
+        "seperator": "\t"
+      }
+    ]
+  },
+  "Salmonella Small Proteins": {
+    "label": "Salmonella Small Proteins",
+    "options": [
+      {
+        "text": "Additional Transcript Data",
+        "value": {"filename": "salmonella-small-proteins_transcript-data.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"},"locus tag","gene name","start","end","gene length","amino acid length","strand"], "pre_selected_columns": ["locus tag","gene name","amino acid length"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "Ribo-Seq",
+        "value": {"filename": "salmonella-small-proteins_ribo-seq.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"},"locus tag","start","end","strand","amino acid length","Ribo-seq"], "pre_selected_columns": ["locus tag","Ribo-seq"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "sPepFinder",
+        "value": {"filename": "salmonella-small-proteins_spepfinder.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"},"locus tag","start","end","strand","amino acid length","sPepFinder"], "pre_selected_columns": ["locus tag","sPepFinder"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "2h Dual RNA Seq",
+        "value": {"filename": "salmonella-small-proteins_2h-dual-rna-seq.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"},"locus tag","logFC","logCPM","PValue","FDR"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "4h Dual RNA Seq",
+        "value": {"filename": "salmonella-small-proteins_4h-dual-rna-seq.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"},"locus tag","logFC","logCPM","PValue","FDR"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "8h Dual RNA Seq",
+        "value": {"filename": "salmonella-small-proteins_8h-dual-rna-seq.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"},"locus tag","logFC","logCPM","PValue","FDR"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "16h Dual RNA Seq",
+        "value": {"filename": "salmonella-small-proteins_16h-dual-rna-seq.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"},"locus tag","logFC","logCPM","PValue","FDR"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "24h Dual RNA Seq",
+        "value": {"filename": "salmonella-small-proteins_24h-dual-rna-seq.csv", "seperator": "\t", "decimal_character": ",", "columns": [{"value": null, "text": "All columns"},"locus tag","logFC","logCPM","PValue","FDR"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "Grad-Seq",
+        "value": {"filename": "salmonella-small-proteins_gradr.csv", "seperator": "\t", "decimal_character": ".", "columns": [{"value": null, "text": "All columns"},"UniprotID","locus tag","gene name","protein","amino acid length","norm_to_max fraction 1","norm_to_max fraction 2","norm_to_max fraction 3","norm_to_max fraction 4","norm_to_max fraction 5","norm_to_max fraction 6","norm_to_max fraction 7","norm_to_max fraction 8","norm_to_max fraction 9","norm_to_max fraction 10","norm_to_max fraction 11","norm_to_max fraction 12","norm_to_max fraction 13","norm_to_max fraction 14","norm_to_max fraction 15","norm_to_max fraction 16","norm_to_max fraction 17","norm_to_max fraction 18","norm_to_max fraction 19","norm_to_max fraction 20","norm_to_max fraction P"], "pre_selected_columns": ["locus tag","gene name","amino acid length","norm_to_max fraction 1","norm_to_max fraction 2","norm_to_max fraction 3","norm_to_max fraction 4","norm_to_max fraction 5","norm_to_max fraction 6","norm_to_max fraction 7","norm_to_max fraction 8","norm_to_max fraction 9","norm_to_max fraction 10","norm_to_max fraction 11","norm_to_max fraction 12","norm_to_max fraction 13","norm_to_max fraction 14","norm_to_max fraction 15","norm_to_max fraction 16","norm_to_max fraction 17","norm_to_max fraction 18","norm_to_max fraction 19","norm_to_max fraction 20","norm_to_max fraction P"]},
+        "seperator": "\t"
+      },
+      {
+        "text": "TraDIS",
+        "value": {"filename": "salmonella-small-proteins_tradis.csv", "seperator": "\t", "decimal_character": ".", "columns": [{"value": null, "text": "All columns"},"locus tag","gene name","function","log2FC","logCPM","PValue","q.value"]},
+        "seperator": "\t"
+      }
+    ]
+  }
+}
