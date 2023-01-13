@@ -140,8 +140,8 @@
               "formula": true,
               "id": "change_values_log-base",
               "selected": 2,
-              "min": null,
-              "max": 1001
+              "min": 1,
+              "max": 100
             }
           }
         },
