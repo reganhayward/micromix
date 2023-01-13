@@ -54,12 +54,12 @@
           <b-dropdown-divider></b-dropdown-divider>
           <b-dropdown-item class="pseudo-link" @click="download_df('excel')">
             <img src="../assets/excel_logo.svg" class="export_menu_icon" />
-            <span class="dropdown-export-title">Download .xls</span>
+            <span class="dropdown-export-title"> Download .xls</span>
           </b-dropdown-item>
           <b-dropdown-divider></b-dropdown-divider>
           <b-dropdown-item class="pseudo-link" @click="download_df('csv')">
             <b-icon-table variant="dark"></b-icon-table>
-            <span class="dropdown-export-title">Download .csv</span>
+            <span class="dropdown-export-title"> Download .csv</span>
           </b-dropdown-item>
           <b-dropdown-form>
             <b-form-group
@@ -108,7 +108,7 @@ export default {
       url: null,
       export_form: {
         file_type: null,
-        csv_seperator: ";"
+        csv_seperator: ","
       }
     };
   },
