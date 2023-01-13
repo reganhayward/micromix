@@ -1,3 +1,11 @@
+#--------------------------------
+#
+# Designed by Titus Ebbecke 2021-2022
+# Modifications by Regan Hayward 2023+
+#
+#--------------------------------
+# 
+# 
 # To-Do: Configure CORS to only allow specific requests. Very important!
 
 import os
@@ -155,6 +163,12 @@ if __name__ == '__main__':
 
 
 # MongoDB
+
+# When testing locally, we can use a local instance of MongoDB for the database.
+# #MongoDB does need to be installed though
+# To test locally, use  client = MongoClient()
+# Otherwise, use #client = MongoClient(os.environ.get("mongocredential")) to point to the MongoDB server on the cloud
+
 #client = MongoClient(os.environ.get("mongocredential"))
 #client = MongoClient() # For offline testing. 
 #client = MongoClient(host=['localhost:8080'])
