@@ -1,7 +1,7 @@
 #--------------------------------
 #
-# Heatmap designed by Titus Ebbecke 2021-2023
-# Modifications by Regan Hayward 2023
+# Heatmap designed by Titus Ebbecke 2021-2022
+# Modifications by Regan Hayward 2023+
 #
 #--------------------------------
 
@@ -12,6 +12,11 @@ from flask_cors import CORS
 from bson.json_util import loads, dumps, ObjectId
 import pandas as pd
 from io import BytesIO
+
+# When testing locally, we can use a local instance of MongoDB for the database.
+# #MongoDB does need to be installed though
+# To test locally, use  client = MongoClient()
+# Otherwise, use #client = MongoClient(os.environ.get("testend")) to point to the MongoDB server on the cloud
 
 #client = MongoClient(os.environ.get("testend"))
 client = MongoClient() # For offline testing.
@@ -28,7 +33,10 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 app.config['FLASK_DEBUG']=1
 app.config['DEBUG'] = True
 
-#Testing different config options - in the end not needed
+#CORS testing - not needed - only needed to add the browser plugin to enable CORS requests (when testing locally)
+# https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf/related?hl=en
+
+#Testing different config options
 #app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 #cors = CORS(app, resources={r"/*":{"origins": "*"}})
 #cors = CORS(app, resources={r"/*":{"cors_allowed_origins": "*"}})
