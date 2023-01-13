@@ -124,7 +124,7 @@
 
       <b-dropdown size="sm" variant="link" pill id="load-query-dropdown" text="Add..." class="m-md-2 rounded" no-caret toggle-class="text-decoration-none">
         <b-popover id="tutorial_popover" :no-fade="true" triggers placement="rightbottom" target="load-query-dropdown" title="3. Load preset filters"
-          >Load pre-filled filters to search for pathogenicity islands, sORF, or just faulty data.</b-popover
+          >Load pre-filled filters to search for pathogenicity islands, sORF etc.</b-popover
         >
         <template v-slot:button-content> <b-icon icon="intersect"></b-icon> Preset Filters </template>
         <b-dropdown-group v-for="(filter_preset_group, index) in filters.items.presets" :key="index" :header="index" id="dropdown-group-numeric">
@@ -135,7 +135,7 @@
 
       <b-dropdown size="sm" variant="link" pill id="load-query-dropdown" text="Add..." class="m-md-2 rounded" no-caret toggle-class="text-decoration-none">
         <b-popover id="tutorial_popover" :no-fade="true" triggers placement="rightbottom" target="load-query-dropdown" title="3. Load preset filters"
-          >Load pre-filled filters to search for pathogenicity islands, sORF, or just faulty data.</b-popover
+          >Load pre-filled filters to search for pathogenicity islands, sORF etc.</b-popover
         >
         <template v-slot:button-content> <b-icon icon="calculator-fill"></b-icon>Transform Data </template>
         <b-dropdown-group v-for="(filter_preset_group, index) in filters.items.transformations" :key="index" :header="index" id="dropdown-group-numeric">
