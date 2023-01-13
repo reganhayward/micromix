@@ -16,10 +16,10 @@
       <div>
         <div class="ball-grid-pulse"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
         <h5 class="title initial_load_text">Loading Session</h5>
-        <small>v0.7.4-logic</small>
+        <small>v1.0.0-local</small>
       </div>
     </div>
-    <b-alert variant="info" show dismissible><strong class="alert-heading">Update v0.7.4-logic</strong>
+    <b-alert variant="info" show dismissible><strong class="alert-heading">Update v1.0.0-local: </strong>
       Added B. Theta filter. Added or/and gating.
     </b-alert>
     <!-- <b-progress v-if="loading.state" :value="loading.bar.value" :variant="loading.bar.variant" :key="loading.bar.variant" height="6px"></b-progress> -->
