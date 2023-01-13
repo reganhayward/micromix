@@ -1,12 +1,6 @@
 {
     "plugins": [
         {
-            "_id": "str some_random_hex_number_1234567890",
-            "desc": "str This is a description of the plugin",
-            "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/SVG_Logo.svg",
-            "name": "str Title name of the plugin"
-        },
-        {
             "_id": "5f984ac1b478a2c8653ed827",
             "desc": "Clustered heatmap by the Ma'ayan Laboratory",
             "image_url": "https://raw.githubusercontent.com/reganhayward/micromix/main/backend/plugins/clustergrammer.svg",
@@ -14,21 +8,22 @@
         },
         {
             "_id": "khds8fohoduskfi7syf74",
-            "desc": "asdkjfns",
-            "image_url": "https://raw.githubusercontent.com/reganhayward/micromix/main/backend/plugins/clustergrammer.svg",
-            "name": "Cufflinks"
-        },
-        {
-            "_id": "khds8fohoduskfi7syf99",
-            "desc": "asdkjfnsdfs",
-            "image_url": "https://raw.githubusercontent.com/reganhayward/micromix/main/frontend/src/assets/heatmap_hiri_logo.svg",
-            "name": "Heatmap"
+            "desc": "Interactive stacked bar chart",
+            "image_url": "https://raw.githubusercontent.com/reganhayward/micromix/main/frontend/src/assets/stacked_bar.svg",
+            "name": "Stacked Bar"
         },
         {
             "_id": "khds8fohoduskfi7syf75",
-            "desc": "Interactive Plotly scatterplot",
-            "image_url": "https://raw.githubusercontent.com/reganhayward/micromix/main/backend/plugins/clustergrammer.svg",
+            "desc": "Interactive scatterplot",
+            "image_url": "https://raw.githubusercontent.com/reganhayward/micromix/main/frontend/src/assets/plotly-logo.svg",
             "name": "Scatterplot"
+        },
+        {
+            "_id": "khds8fohoduskfi7syf99",
+            "desc": "2D and 3D heatmap",
+            "image_url": "https://raw.githubusercontent.com/reganhayward/micromix/main/frontend/src/assets/heatmap_hiri_logo.svg",
+            "name": "Heatmap"
         }
+
     ]
 }
