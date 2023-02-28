@@ -11,8 +11,7 @@ Jinja2==2.11.2
 #llvmlite==0.34.0
 #llvmlite==0.36.0
 llvmlite
-#MarkupSafe==1.1.1
-MarkupSafe
+MarkupSafe==2.0.1
 #numba==0.51.2
 numba
 #numpy==1.19.2
