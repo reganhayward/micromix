@@ -28,7 +28,12 @@ Micromix was designed as a visualisation platform to easily view next generation
 The site contains a backend (Flask) and frontend (Vue.js) that communicate with each other, saving data from each session using MongoDB. Plugins within the site are typically setup on separate servers with data being passed and a visualisation returned and displayed within the site.
 Since each user session is stored with a unique ID, session information can be re-loaded by passing the unique ID into the URL. For example: http://micromix.com?config=63ec9a4be1ea830ca6249f46. These types of links can also be shared to collaborators so they can examine specific data patterns from data within the site, or unique user data they have manually uploaded.
 
-**<< image to be inserted of infrastructure >>**
+<br>
+<br>
+
+<img width="80%" src="images/micromix_inf.png" />
+
+
 
 # Installing and running Micromix
 
