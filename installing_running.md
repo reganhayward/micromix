@@ -1,7 +1,7 @@
 # Micromix user guide
 
 ## Contents
-- [Micromix](#micromix)
+- [Micromix](README.md#micromix)
 - [Installing and running](installing_running.md)
     - [Using pre-built AWS container](installing_running.md#1-using-pre-built-aws-container)
     - [Local install](installing_running.md#2-running-locally-or-on-a-server)
