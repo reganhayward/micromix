@@ -8,11 +8,11 @@
         - [Website](installing_running.md#website)
         - [Heatmap](installing_running.md#heatmap)
 - [Using Micromix](using_micromix.md)
-- [Modifying Micromix](modifying-micromix.md)
-    - [How to add a new organism](modifying-micromix.md#how-to-add-a-new-organism)
-    - [How to update gene or pathway annotations](modifying-micromix.md#how-to-update-gene-or-pathway-annotations)
-    - [Generating new annotations](modifying-micromix.md#generating-new-annotations)
-    - [Adding new visualisation plugins](modifying-micromix.md#adding-new-visualisation-plugins)
+- [Modifying Micromix](modifying_micromix.md)
+    - [How to add a new organism](modifying_micromix.md#how-to-add-a-new-organism)
+    - [How to update gene or pathway annotations](modifying_micromix.md#how-to-update-gene-or-pathway-annotations)
+    - [Generating new annotations](modifying_micromix.md#generating-new-annotations)
+    - [Adding new visualisation plugins](modifying_micromix.md#adding-new-visualisation-plugins)
 
 
 <br><br>
