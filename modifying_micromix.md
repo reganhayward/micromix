@@ -130,10 +130,11 @@ generate_transcriptome.py \
 You can now upload your transcriptome to eggNOG by browsing to [eggNOG-mapper](http://eggnog-mapper.embl.de/) . Select **CDS** as shown, then upload your transcriptome **upload sequences**.
 Enter your **email address** and **submit** the job. You will receive an email that you need to click on, which will take you back to their site where you can start your job **Start job**.
 
-**<< image to be inserted >>**
+<img width="80%" src="images/eggnog_1.jpg" />
 
-After a short time, you will receive another email providing a download link. 
-[download xxx files], this is the file that is used in the next step.
+After a short time, you will receive another email providing a download link. This will take you back to their site where you can download the annotation files that will be used in the next step. **Please download as a .csv**
+
+<img width="80%" src="images/eggnog_2.jpg" />
 
 
 ### **Step 4:**
@@ -144,15 +145,16 @@ To do this, you will need to run the following
 
 ```bash
 #The script is located here 
-/folder/script.R
+/scripts/parse_eggnog_annotations.R
 
 #R will need to be installed on your machine for this to execute successfully
 
+#When running, you need to provide the eggNOG annotation file as shown
 #The resulting output files will be saved in the current directory
-./scripr.R eggnog.xxx
+./Rscript parse_eggnog_annotations.R eggnog_annotations.csv
 
-#After running, you should have the following two files:
-genes.json
+#After running, you should have the following two new files:
+gene_annotations.json
 pathways.json
 ```
 
@@ -161,8 +163,8 @@ pathways.json
 The corresponding file should then be added as an entry to datasets.json
 ```
 b-theta/website/frontend/src/assets/json/organisms.json
-
 ```
+
 Here we have added **Bacteria B** with the corresponding tags:
 
 `"name":` - The name of the bacteria (displayed on button)
