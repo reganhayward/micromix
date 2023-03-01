@@ -9,9 +9,10 @@
         - [Heatmap](installing_running.md#heatmap)
 - [Using Micromix](using_micromix.md)
 - [Modifying Micromix](modifying_micromix.md)
+    - [Preparing a new bacteria](modifying_micromix.md#preparing-a-new-bacteria)
     - [How to add a new organism](modifying_micromix.md#how-to-add-a-new-organism)
-    - [How to update gene or pathway annotations](modifying_micromix.md#how-to-update-gene-or-pathway-annotations)
-    - [Generating new annotations](modifying_micromix.md#generating-new-annotations)
+    - [How to add new expression data](modifying_micromix.md#how-to-add-new-expression-data)
+    - [Modifying or adding gene or pathway annotations](modifying_micromix.md#modifying-or-adding-gene-or-pathway-annotations)
     - [Adding new visualisation plugins](modifying_micromix.md#adding-new-visualisation-plugins)
 
 
