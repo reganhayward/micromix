@@ -3,16 +3,16 @@
 ## Contents
 - [Micromix](#micromix)
 - [Installing and running](installing_running.md)
-    - [Using pre-built AWS container](installing_running.md#1-using-pre-built-aws-container)
-    - [Local install](#local-install)
-        - [Website](#website)
-        - [Heatmap](#heatmap)
+    - [1. Using pre-built AWS container](installing_running.md#1-using-pre-built-aws-container)
+    - [2. Local install](installing_running.md#2local-install)
+        - [Website](installing_running.md#website)
+        - [Heatmap](installing_running.md#heatmap)
 - [Using Micromix](using_micromix.md)
 - [Modifying Micromix](modifying-micromix.md)
-    - [How to add a new organism](#how-to-add-a-new-organism)
-    - [How to update gene or pathway annotations](#how-to-update-gene-or-pathway-annotations)
-    - [Generating new annotations](#generating-new-annotations)
-    - [Adding new visualisation plugins](#adding-new-visualisation-plugins)
+    - [How to add a new organism](modifying-micromix.md#how-to-add-a-new-organism)
+    - [How to update gene or pathway annotations](modifying-micromix.md#how-to-update-gene-or-pathway-annotations)
+    - [Generating new annotations](modifying-micromix.md#generating-new-annotations)
+    - [Adding new visualisation plugins](modifying-micromix.md#adding-new-visualisation-plugins)
 
 
 <br><br>
