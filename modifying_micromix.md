@@ -106,12 +106,16 @@ To generate the transcriptome, you need to decide which features to use. For exa
 
 ```bash
 #The generate_transcriptome.py script is located here:
-/folder/generate_transcriptome.py
+/scripts/generate_transcriptome.py
 
-#T view the help menu
+#To view the help menu
 ./generate_transcriptome.py -h
 
-#To run, select the feature (CDS etc), and also the gene ID type. If available, we recommend using a tag that exists for each loci such as a locus tag (sl1344_0001), so un-named and hypothetical genes will be included. You will need to open the .gff file to identify what fields are available (alternatives are gene_id, ID, Name etc).
+#If available, we recommend using a tag that exists for each loci such as a locus tag (sl1344_0001), 
+#so un-named and hypothetical genes will be included. 
+#You will need to manually open the .gff file to identify what fields are available (alternatives are gene_id, ID, Name etc).
+
+#To run, select the feature (CDS etc), and also the gene ID type. 
 generate_transcriptome.py \
 -fasta salmonella_sl1344.fa \
 -gff salmonella_sl1344.gff3 \
@@ -119,11 +123,11 @@ generate_transcriptome.py \
 -o salmonella_sl1344.fa
 ```
 
-> Note: Bacterial genome annotations (.gff/.gtf) can be challenging to work with due to non-uniformity, duplicate gene names and many other issues. You may receive an error message saying that some genes are duplicated, and thus a transcriptome couldn't be created. If this happens, open the .gff file and manually change the locus_tags. For example, if there are multiple SL1344_0010, change to SL1344_0010a and SL1344_0010b, then re-run.
+> Note: Bacterial genome annotations (.gff/.gtf) can be challenging to work with due to non-uniformity, duplicate gene names and many other issues. You may receive an error message saying that some genes are duplicated, and thus a transcriptome couldn't be created. If this happens, open the .gff file and manually change the locus_tags or gene identifier you have chosen. For example, if there are multiple SL1344_0010, change to SL1344_0010a and SL1344_0010b, then re-run.
 
 ### **Step 3:**
 
-You can now upload your transcriptome to eggNOG by browsing to `http://eggnog-mapper.embl.de/`. Select **CDS** as shown, then upload your transcriptome **upload sequences**.
+You can now upload your transcriptome to eggNOG by browsing to [eggNOG-mapper](http://eggnog-mapper.embl.de/) . Select **CDS** as shown, then upload your transcriptome **upload sequences**.
 Enter your **email address** and **submit** the job. You will receive an email that you need to click on, which will take you back to their site where you can start your job **Start job**.
 
 **<< image to be inserted >>**
