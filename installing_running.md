@@ -32,7 +32,7 @@ There are two options to use Micromix, depending on the user requirements.
 ## 1. Using pre-built AWS container
 
 The simplest way to use Micromix is to use our pre-built container. This is available on AWS here: **[ << insert hyperlink >> ]**, as a downloadable virtual image that can be loaded with tools such as VirtualBox. Alternatively, the container can also be directly used with AWS services and loaded within the browser. **[ << instructions to follow >> ]**
-Once loaded, the site can be accessed by opening the browser and typing **localhost:8000**
+Once loaded, the site can be accessed by opening the browser and typing **localhost:8080**
 
 <img width="80%" src="images/micromix_running.png" />
 
@@ -47,7 +47,7 @@ There are a number of requirements if running locally or on a server for the fir
 sudo apt-get install git
 
 #Download micromix files from GitHub
-git clone www.site.com 
+git clone https://github.com/reganhayward/btheta_site.git
 ```  
 
 **Step 2:** Install required software and run:
@@ -67,6 +67,8 @@ sudo systemctl status mongodb
 #if not, then start with
 sudo systemctl start mongodb
 ```
+
+<img width="80%" src="images/mongodb_running.png" />
 
 
 **The website backend:**
@@ -97,7 +99,8 @@ flask run --port 3000
 
 #you should see the following output
 ```
-**<< image to be inserted FLASK running >>**
+
+<img width="80%" src="images/website_backend_running.png" />
 
 
 **The website frontend:**
@@ -167,12 +170,12 @@ npm run serve
 ```
 > Open the address shown in the terminal where you executed the line above with your web browser. This should be http://localhost:8080/. The backend should also be running, otherwise the site will not load.
 
-**<< image to be inserted - frontend running >>**
+<img width="80%" src="images/website_frontend_running.png" />
 
 
 > At this point, the site will be functional and users can browse datasets, apply filters and use available plugins, apart from the Heatmap - which requires further installation.
 
-**<< image to be inserted - Site working >>**
+<img width="80%" src="images/micromix_running.png" />
 
 
 ### **Heatmap**
@@ -202,7 +205,8 @@ flask run
 
 #you should see the following output
 ```
-**<< image to be inserted  - backend running HM>>**
+
+<img width="80%" src="images/heatmap_backend_running.png" />
 
 
 **Step 1:** Prepare the heatmap frontend: 
@@ -218,7 +222,8 @@ npm run serve
 
 #you should see the following output
 ```
-**<< image to be inserted >>**
 
-> You should now be able to browse the site and use the heatmap visualisation plugin
+<img width="80%" src="images/heatmap_frontend_running.png" />
+
+> You should now be able to browse the site by selecting a dataset then using the heatmap visualisation plugin
 
