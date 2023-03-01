@@ -2,7 +2,7 @@
 
 ## Contents
 - [Micromix](#micromix)
-- [Installing and running](#installing-and-running)
+- [Installing and running](installing_running.md)
     - [Using pre-built AWS container](#using-pre-built-aws-container)
     - [Local install](#local-install)
         - [Website](#website)
