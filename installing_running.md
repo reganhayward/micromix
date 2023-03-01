@@ -20,16 +20,19 @@
 
 # Installing and running Micromix
 
-There are three options to use Micromix, depending on the user requirements.
+There are two options to use Micromix, depending on the user requirements.
 
-## Using pre-built AWS container
+1) Using pre-built AWS container
+2) Running locally or on a server
+
+## 1. Using pre-built AWS container
 
 The simplest way to use Micromix is to use our pre-built container. This is available on AWS here: **[ << insert hyperlink >> ]**, as a downloadable virtual image that can be loaded with tools such as VirtualBox. Alternatively, the container can also be directly used with AWS services and loaded within the browser.
 Once loaded, the site can be accessed by opening the browser and typing **localhost:8000**
 
 **<< image to be inserted >>**
 
-## Running locally or on a server
+## 2. Running locally or on a server
 
 ### **Website**
 There are a number of requirements if running locally or on a server for the first time. 
