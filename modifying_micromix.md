@@ -29,15 +29,13 @@ If using the pre-configured image, you will have to restart the underlying servi
 
 ```bash
 #Website
-restart website-backend service
-restart website-frontend service
+code to be supplied
 
 #Heatmap
-restart heatmap-backend service
-restart heatmap-frontend service
+code to be supplied
 ```
 
-If you have pre-compiled yourself, you only need to press `Control + C` to stop the service in the relevant terminal, then press the up arrow to find the previous command followed by `Enter`
+> If you have pre-compiled yourself, you only need to press `Control + C` to stop the service in the relevant terminal, then press the up arrow to find the previous command, followed by `Enter`
 
 
 ## Preparing a new bacteria
@@ -45,18 +43,21 @@ If you have pre-compiled yourself, you only need to press `Control + C` to stop 
 Micromix can be used with any desired bacteria. Once a bacteria has been chosen, you will need to download and prepare some common files.
 Here is a brief summary:
 
-**Step 1:** download files
+**Step 1:** Download files
 
 **Step 2:** Create transcriptome
 
-**Step 3:** Create eggnog annotations
+**Step 3:** Create eggNOG annotations
 
-**Step 4:** Run script to generate .json files for micromix
+**Step 4:** Run script to generate .json files for Micromix
 
+<br>
 
-In this example, we will use `Salmonella typhimurium SL1344`
+> In this example, we will use `Salmonella typhimurium SL1344`
 
-**Step 1:**
+<br>
+
+### **Step 1:**
 
 Download the genome (.fasta or .fa) and genome annotation (.gff or .gtf).
 
@@ -74,9 +75,9 @@ gunzip salmonella_sl1344.gff3.gz
 gunzip salmonella_sl1344.fa.gz
 ```
 
-**Step 2:**
+### **Step 2:**
 
-Generate a bacterial transcriptome. This is required to upload to eggNOG-mapper [REF], which will provide annotations, including gene description, KEGG pathways, Gene Ontologies etc.
+Generate a bacterial transcriptome. This is required to upload to [eggNOG-mapper](http://eggnog-mapper.embl.de/), which will provide annotations, including gene description, KEGG pathways, Gene Ontologies etc.
 
 To get a summary of the features within your .gff file, you can run this command:
 
@@ -101,7 +102,7 @@ awk -F '\t' '{print $3}' salmonella_sl1344.gff3 | sort | uniq -c
      40 pseudogenic_transcript
 ```
 
-To generate the transcriptome, we need to know what features we would like to use. For example, we may only want to look at CDS regions, or we may want to look at a wider range of features as shown:
+To generate the transcriptome, you need to decide which features to use. For example, we may only want to look at CDS regions, or we may want to look at a wider range of features as shown:
 
 ```bash
 #The generate_transcriptome.py script is located here:
@@ -120,7 +121,7 @@ generate_transcriptome.py \
 
 > Note: Bacterial genome annotations (.gff/.gtf) can be challenging to work with due to non-uniformity, duplicate gene names and many other issues. You may receive an error message saying that some genes are duplicated, and thus a transcriptome couldn't be created. If this happens, open the .gff file and manually change the locus_tags. For example, if there are multiple SL1344_0010, change to SL1344_0010a and SL1344_0010b, then re-run.
 
-**Step 3:**
+### **Step 3:**
 
 You can now upload your transcriptome to eggNOG by browsing to `http://eggnog-mapper.embl.de/`. Select **CDS** as shown, then upload your transcriptome **upload sequences**.
 Enter your **email address** and **submit** the job. You will receive an email that you need to click on, which will take you back to their site where you can start your job **Start job**.
@@ -131,7 +132,7 @@ After a short time, you will receive another email providing a download link.
 [download xxx files], this is the file that is used in the next step.
 
 
-**Step 4:**
+### **Step 4:**
 
 The last step is extracting out the required information from the eggNOG output and saving to a compatible format for Micromix (.json files)
 
