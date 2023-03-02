@@ -40,7 +40,7 @@ Once chosen, you have the option of selecting the desired datasets.
 
 You also have the choice of adding or removing specific columns.
 
-<img width="50%" src="images/choose_additional_columns.png" />
+<img width="50%" src="images/selecting_additional_columns.png" />
 
 Clicking **Add** will load the data
 
