@@ -67,15 +67,17 @@ On the top right of the website there is a toolbar with four buttons.
 
 ### Plugins / visualisations:
 
-This is where the data visualisation plugins are loaded as separate buttons. Each plugin when clicked will use allow the user to visualise their data. Additional plugins can be created the Plugins Buttons can be clicked 
+This is where the data visualisation plugins are loaded as separate buttons. Each plugin when clicked will use allow the user to visualise their data. Additional plugins can be created and added. For details on how to add new plugins, see **<< link to section >>** 
 
-**Filters:** sdf
+### Filters:
+
+Standard filters exist allowing functional annotations to be searched, such as Gene Ontology (GO) and KEGG IDs - these are available under **Add Filter**. Custom gene lists such as virulence factors/ncRNA etc can also be added to select genes of interest - these are available under **Preset Filters**. Values within the table can also be modified, such as converting to Log, or displaying certain nummber of decimal places - these are available under **Transform Data**. 
 
 <br>
 
 ## Filtering data
 
-
+As discussed above, these is the option of filtering the entire list of genes into categories of interest.
 
 ## Visualising data
 
