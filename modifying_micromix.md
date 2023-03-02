@@ -261,7 +261,7 @@ Here is a brief description of the file contents:
 
 `"Bacteria A RNA-seq":` - The is the bold value that cannot be selected in the dropdown menu when selecting a new dataset
 
-**<< insert image >>**
+<img width="50%" src="images/select_data_dropdown.png" />
 
 `"text": "Dataset 1" ` and `"text": "New dataset" ` - these are the names that will appear in the dropdown box that when selected will load the corresponding expression data
 
@@ -271,7 +271,7 @@ The `columns` field should contain all columns within the associated file. If th
 
 > If you would not like to immediately show all columns, you can decide which columns should initially be displayed with `pre_selected_columns`. They can be re-added by the user when selecting the data and selecting `choose additional columns...`.  
 
-**<< insert image >>**
+<img width="50%" src="images/choose_additional_columns.png" />
 
 > After adding new expression data, both the frontend and backend will require a restart
 
