@@ -77,7 +77,19 @@ Standard filters exist allowing functional annotations to be searched, such as G
 
 ## Filtering data
 
-As discussed above, these is the option of filtering the entire list of genes into categories of interest.
+As discussed above, there is the option of filtering the entire list of genes into categories of interest.
+
+ - The functional annotation filters allow you to type the beginning of a category/pathway and the closest matches appear in the dropdown menu (although only 10 are initially visible, additional can be viewed by scrolling). Functional annotations can be modified as described here **<< insert link >>**
+
+**<< insert image >>**
+
+ - Filters can either be a singular, or chained together
+
+**<< insert image >>**
+
+ - All filters can be modified, click here to read more **<< insert link >>**
+
+<br>
 
 ## Visualising data
 
