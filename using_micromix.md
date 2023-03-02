@@ -30,9 +30,22 @@ The site was developed to be adaptable for use with multiple organisms and datas
 
 ## Selecting organism
 
+The first page allows you to select one of the available organisms/bacteria. 
+
+<img width="80%" src="images/micromix_running.png" />
+
+Once chosen, you have the option of selecting the desired datasets.
+
+<img width="80%" src="images/select_data.png" />
+
+You also have the choice of adding or removing specific columns.
+
+<img width="80%" src="images/choose_additional_columns.png" />
+
+Clicking **Add** will load the data
 
 
-## Filterig data
+## Filtering data
 
 
 
