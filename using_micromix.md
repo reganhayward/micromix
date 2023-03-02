@@ -93,4 +93,22 @@ As discussed above, there is the option of filtering the entire list of genes in
 
 ## Visualising data
 
+There are currently 3 visualisation plugins available, Heatmap, Clustergrammer and Scatterplot.
 
+### Heatmap
+
+This is the heatmap that is required to be run alongside the website. It was designed with WebGL, providing 3D and 2D views of the resulting heatmap. It is highly customisable and provides an option to export the heatmap as an image. An advantage of this plugin is its speed and ability to easily visualise many genes and samples.
+
+If the heatmap is not working, you may need to make sure it has been deployed correctly - see **<< insert link >>**
+
+<img width="80%" src="images/heatmap.png" />
+
+The Clustergrammer plugin utalises the API from the Ma'ayan lab, passing the requested data and returning an interractive heatmap. Here you can utalise features such as row and column clustering, as well as exporting the heatmap as an image. 
+
+> It should be noted that < 200 genes should be used for visualisations (an inbuilt restriction), otherwise an error may occur 
+
+<img width="80%" src="images/clustergrammer.png" />
+
+Scatterplot
+
+**<< TBD >>**
