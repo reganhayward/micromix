@@ -46,7 +46,32 @@ You also have the choice of adding or removing specific columns.
 
 Clicking **Add** will load the data
 
+
 <img width="80%" src="images/site_descriptions.png" />
+
+The above image shows main elements of the site once data has been added. 
+
+### Address bar:
+
+Each time new data is selected, a new database entry is added and assigned a unique ID. This configuration ID is added to the address bar and links the current session, storing any data transformations, filtering and visualisations. This becomes useful when revisiting the site and instead of re-loading data and applying filters, the config ID can be pasted into the address bar and the existing session will be restored. This link can also be shared with collaborators, providing an easy way to share interesting results or observations.
+
+### Toolbar:
+
+On the top right of the website there is a toolbar with four buttons. 
+
+ - The **padlock button** locks the current state of the site so no further edits can be made. This would be useful when sending to a collaborator or if wanting to include a URL within a manuscript or similar document. 
+ - The **download button** allows users to download the currently selected dataset as an Excel or a delimited file (such as .csv). 
+ - The **new document button** will re-load the website so a new dataset can be selected. 
+ - The **help button** when clicked will provide pop-over text explaining various features of the site.
+
+
+### Plugins / visualisations:
+
+This is where the data visualisation plugins are loaded as separate buttons. Each plugin when clicked will use allow the user to visualise their data. Additional plugins can be created the Plugins Buttons can be clicked 
+
+**Filters:** sdf
+
+<br>
 
 ## Filtering data
 
