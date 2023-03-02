@@ -171,7 +171,7 @@ If you are modifying an existing bacteria/organism, there should already be an e
 b-theta/website/frontend/src/assets/json/organisms.json
 ```
 
-Here we have added **Bacteria B**:
+Here as an example we have added **Bacteria B**:
 
 ```json
 {
@@ -209,15 +209,16 @@ Here we have added **Bacteria B**:
 
 > After adding new organism, you will need to link it to the  expression data - see the next section
 
+<br>
 
 ## How to add new expression data
 
-###### not just expression data - other related data types include:::
+Although the heading mentions expression data, data from other next generation sequencing (NGS) approaches can be used. For example, proteomics data, genome data etc.
 
-Expression files should be saved here:
+Once the expression (or relevant) files have been generated, they should be saved here:
 
 ```
-b-theta/website/backend/static/new_expression.tsv
+b-theta/website/backend/static/
 ```
 
 The corresponding file should then be added as an entry to datasets.json
@@ -227,18 +228,6 @@ b-theta/website/frontend/src/assets/json/datasets.json
 ```
 
 Each new entry requires all the fields presented here, such as `text`, `value` and `separator`. The new entry here is called **New dataset** and is linked to the file **new_data.tsv** that should have previously been saved.
-
-Here is a brief description of the file contents:
-
-`"Micromix RNA-seq":` - The is the bold value that cannot be selected in the dropdown menu when selecting a new dataset
-
-`"text": "Dataset 1" ` and `"text": "New dataset" ` - these are the names that will appear in the dropdown box that when selected will load expression data
-
-`"value": ` - this contains the filename with the expression data, the delimiter and decimal character. 
-
-The `columns` field should contain all columns within the associated file - here, this would be `dataset1.tsv`. If the column names do not match, an error will occur.
-
-If you would not like to immediately show all columns, you can decide which columns should initially be displayed with `pre_selected_columns`. They can be re-added by the user when selecting the data and selecting `choose additional columns...`.  
 
 ```json
 {
@@ -267,6 +256,23 @@ If you would not like to immediately show all columns, you can decide which colu
   }
 }
 ```
+
+Here is a brief description of the file contents:
+
+`"Bacteria A RNA-seq":` - The is the bold value that cannot be selected in the dropdown menu when selecting a new dataset
+
+**<< insert image >>**
+
+`"text": "Dataset 1" ` and `"text": "New dataset" ` - these are the names that will appear in the dropdown box that when selected will load the corresponding expression data
+
+`"value": ` - this contains the filename with the expression data, the delimiter and decimal character. 
+
+The `columns` field should contain all columns within the associated file. If the column names do not match, an error will occur.
+
+> If you would not like to immediately show all columns, you can decide which columns should initially be displayed with `pre_selected_columns`. They can be re-added by the user when selecting the data and selecting `choose additional columns...`.  
+
+**<< insert image >>**
+
 > After adding new expression data, both the frontend and backend will require a restart
 
 
@@ -279,24 +285,6 @@ using a script linking eggnog...
 Rscript parse_eggnog_annotations.R eggnog_annotation.tsv
 ```
 
-
-## Adding new visualisation plugins
-
-Buttons can do many things,
-Link to a different API - clustergrammer
-Link to website - jbrowse
-Link to a custom API - heatmap
-
-Info stored in [  ] and should be assigned a unique HEX number, such as xxx. 
-Each plugin is stored in [  ]. Open the corresponding files to examine how information is parsed.
-
-
-
-
-8.	How to deploy on a server and config files – nginx and gunicorn
-
-
-
 To update gene annotations and pathways
 
 Frontend
@@ -306,3 +294,29 @@ Src/components/search_query.vue
 
 Backend
 Static/gene_annotations.json
+
+
+
+## Adding new visualisation plugins
+
+**<< work in progress >>**
+
+Buttons can do many things,
+
+ - Link to a different API - clustergrammer
+ - Link to website - jbrowse
+ - Link to a custom API - heatmap
+
+Info stored in [  ] and should be assigned a unique HEX number, such as xxx.
+
+Each plugin is stored in [  ]. Open the corresponding files to examine how information is parsed.
+
+
+
+
+## How to deploy on a server and config files – nginx and gunicorn
+
+**<< work in progress >>**
+
+
+
