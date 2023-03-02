@@ -25,17 +25,20 @@
 
 Depending on the way you have configured or downloaded Micromix, when making changes, the frontend or backend (or both) may require restarting before the changes are visable.
 
-If using the pre-configured image, you will have to restart the underlying service.
+If using the pre-configured image, you can do this by pressing `Control + C` to stop the service in the relevant terminal.
 
 ```bash
-#Website
-code to be supplied
+#You can then re-run the required service
 
-#Heatmap
-code to be supplied
+#To start the website
+./run_website.sh
+
+#To start the heatmap
+./run_heatmap.sh
+
 ```
 
-> If you have pre-compiled yourself, you only need to press `Control + C` to stop the service in the relevant terminal, then press the up arrow to find the previous command, followed by `Enter`
+> If you have pre-compiled yourself, you only need to press `Control + C` to stop the service in the relevant terminal, then press the up arrow to find the previous command, followed by `Enter`.
 
 
 ## Preparing a new bacteria
@@ -160,23 +163,15 @@ pathways.json
 
 ## How to add a new organism
 
-The corresponding file should then be added as an entry to datasets.json
+If you are adding a new organism, you will need to add a new entry to `datasets.json` 
+
+If you are modifying an existing bacteria/organism, there should already be an entry, which no action is required 
+
 ```
 b-theta/website/frontend/src/assets/json/organisms.json
 ```
 
-Here we have added **Bacteria B** with the corresponding tags:
-
-`"name":` - The name of the bacteria (displayed on button)
-
-`"description":` - The description (displayed on button)
-
-`"path":` - This automatically points to `b-theta/website/frontend/src/assets/organisms/`. You should copy the default folder and rename to your new bacterial name. Within this folder is an icon you can update which is displayed on the button. You can also adit the file `filters.json` to add/modify/create custom filters (discussed below in more detail in the section **[xxx]**).
-
-`"id":` - this is a string and hex numbers that should be unique for each bacteria
-
-`"datasets":` - should link to an entry in this file: `b-theta/website/frontend/src/assets/json/datasets.json`. 
-
+Here we have added **Bacteria B**:
 
 ```json
 {
@@ -193,12 +188,25 @@ Here we have added **Bacteria B** with the corresponding tags:
       "name": "Bacteria B",
       "description": "Manually select datasets.",
       "path": "/BacteriaB",
-      "id": "bacteria-a-e2ad6b25-40cb-4594-8685-f4fcb3ceb0e8",
+      "id": "bacteria-b-e2ad6b25-40cb-4594-8685-f4fcb3ceb0e8",
       "datasets": ["Bacteria B RNA-seq"]
     }
   }
 }
 ```
+
+**Description of the tags:**
+
+`"name":` - The name of the bacteria (displayed on button)
+
+`"description":` - The description (displayed on button)
+
+`"path":` - This path automatically points to `b-theta/website/frontend/src/assets/organisms/`. This is where the majority of configuration files are stored for each bacteria within the site. For each new bacteria that is added, you should browse to this location and copy either the default folder or an existing bacterial folder and rename to your new bacterial name. In this example, the entire default folder should be copied and re-named to BacteriaB. Within this newly renamed folder is an icon you can choose to update, which is displayed on the button. You can also adit the file `filters.json` to add/modify/create custom filters (discussed below in more detail in the section [Modifying or adding gene or pathway annotations](modifying_micromix.md#modifying-or-adding-gene-or-pathway-annotations).
+
+`"id":` - this is a string and hex numbers that should be unique for each bacteria
+
+`"datasets":` - should link to an entry in this file: `b-theta/website/frontend/src/assets/json/datasets.json` (see below). 
+
 > After adding new organism, you will need to link it to the  expression data - see the next section
 
 
