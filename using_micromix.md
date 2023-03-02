@@ -36,6 +36,8 @@ The first page allows you to select one of the available organisms/bacteria.
 
 Once chosen, you have the option of selecting the desired datasets.
 
+You can also choose to load in custom data from other sources such as delimited file or URL
+
 <img width="80%" src="images/select_dataset.png" />
 
 You also have the choice of adding or removing specific columns.
@@ -44,6 +46,7 @@ You also have the choice of adding or removing specific columns.
 
 Clicking **Add** will load the data
 
+<img width="80%" src="images/site_descriptions.png" />
 
 ## Filtering data
 
