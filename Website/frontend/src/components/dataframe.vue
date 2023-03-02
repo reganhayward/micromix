@@ -2,16 +2,20 @@
   <div>
     <b-card>
       <div class="table-options">
-        <b-form-group label="Search" label-size="sm" label-for="filterInput" class="inline-element">
+        <!-- I have disabled this as I couldn't figure out how to change the default action from keypress to pressing enter
+          The issue is that when a large daframe is loaded, it makes the page unresponsive and thus unusable
+          There is a filtering option that can actually be used instead - seach for locus_tag and enter the IDs
+              <b-form-group label="Search:" label-size="sm" label-for="filterInput" class="inline-element move_search">
           <b-form-input
+            v-on:keyup.enter="onEnter"
             v-model="filter"
             type="search"
             id="filterInput"
             size="sm"
             placeholder="Type to Search"
-            class="inline-element"
+            class="inline-element test"
           ></b-form-input>
-        </b-form-group>
+        </b-form-group> -->
         <b-form-group
           label="Show"
           label-size="sm"
