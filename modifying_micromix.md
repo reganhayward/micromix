@@ -222,6 +222,7 @@ b-theta/website/backend/static/
 ```
 
 The corresponding file should then be added as an entry to datasets.json
+
 ```
 b-theta/website/frontend/src/assets/json/datasets.json
 
@@ -261,7 +262,7 @@ Here is a brief description of the file contents:
 
 `"Bacteria A RNA-seq":` - The is the bold value that cannot be selected in the dropdown menu when selecting a new dataset
 
-<img width="50%" src="images/select_data_dropdown.png" />
+<img width="50%" src="images/select_data_dropdown_bold.png" />
 
 `"text": "Dataset 1" ` and `"text": "New dataset" ` - these are the names that will appear in the dropdown box that when selected will load the corresponding expression data
 
