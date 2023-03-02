@@ -20,3 +20,22 @@
 
 
 <br><br>
+
+# Using Micromix
+
+This is a breif guide for highlight the functionality of the Micromix website. 
+
+The site was developed to be adaptable for use with multiple organisms and datasets that can be viewed through available plugins. New organisms/datasets can be added or removed, and plugins can be designed and added for additional visualisation options.
+
+
+## Selecting organism
+
+
+
+## Filterig data
+
+
+
+## Visualising data
+
+
