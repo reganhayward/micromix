@@ -36,11 +36,11 @@ The first page allows you to select one of the available organisms/bacteria.
 
 Once chosen, you have the option of selecting the desired datasets.
 
-<img width="80%" src="images/select_data.png" />
+<img width="80%" src="images/select_dataset.png" />
 
 You also have the choice of adding or removing specific columns.
 
-<img width="80%" src="images/choose_additional_columns.png" />
+<img width="50%" src="images/choose_additional_columns.png" />
 
 Clicking **Add** will load the data
 
