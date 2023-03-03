@@ -161,6 +161,10 @@ gene_annotations.json
 pathways.json
 ```
 
+> The script `parse_eggnog_annotations.R` can be modified to extract and link additional functional annotations, currently it only extracts GO and KEGG IDs linking pathway names with these IDs. If required, you will need to find an R package or API that can provide the description of the interested IDs. 
+
+<br>
+
 ## How to add a new organism
 
 If you are adding a new organism, you will need to add a new entry to `datasets.json` 
@@ -276,25 +280,25 @@ The `columns` field should contain all columns within the associated file. If th
 
 > After adding new expression data, both the frontend and backend will require a restart
 
+<br>
 
 ## Modifying or adding gene or pathway annotations
 
-#where to look
+There can be up to four files that may need to be edited, depending on requirements.
 
-using a script linking eggnog...
 ```bash
-Rscript parse_eggnog_annotations.R eggnog_annotation.tsv
-```
+#Files associated with gene annotations and pathways
 
-To update gene annotations and pathways
+#Frontend - bacteria specific
+Src/assets/organisms/<bacteria>/pathways.json
+Src/assets/organisms/<bacteria>/filters.json
 
-Frontend
-Src/assets/organisms/bacteroides/pathways.json
-Src/assets/organisms/bacteroides/filters.json
+#Frontend - 
 Src/components/search_query.vue
 
-Backend
+#Backend
 Static/gene_annotations.json
+```
 
 
 
