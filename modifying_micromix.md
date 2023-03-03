@@ -433,6 +433,8 @@ For example, in the below snippet, all filters are stored under **functional** t
           },
           "items": {
             "filter_annotation": {
+	    }
+	}}}}
 ```
 
 
@@ -496,6 +498,7 @@ The plugin configuration file is stored here: `btheta_site/Website/plugins.json`
     
 Each plugin also requires a python script to pass the expression data to the API. These files are stored here: `btheta_site/Website/backend/plugins`. If you would like to create your own, there is a file called `template.py` that you can modify for your own purposes.
     
+
 
 
 ## How to deploy on a server and config files – nginx and gunicorn
