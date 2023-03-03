@@ -402,7 +402,7 @@ Website/frontend/src/components/search_query.vue
 
 #Loading functional annotations is achieved from the function
 load_autocomplete_json()
-#This should be lines 335-340 - shown below
+#This should be lines 335-348 (shown below)
 ```
 
 ```javascript
@@ -411,7 +411,7 @@ load_autocomplete_json() {
     this.filters.items.templates["Filter by annotation"]["KEGG Pathway"].items.filter_annotation.source.items = this.pathways.kegg;
 },
 ```
-
+ - this.filters.items.templates
 this.filters.items.templates["Filter by annotation"]["GO Term"].items.filter_annotation.source.items = this.pathways.go;
 
 
