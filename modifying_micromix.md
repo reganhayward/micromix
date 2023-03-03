@@ -387,7 +387,6 @@ Website/frontend/src/assets/organisms/bacteriaB/filters.json
 
 #2) Loading the filters
 Website/frontend/src/components/search_query.vue
-
 ```
 
 **1) Filters for each bacteria**
@@ -487,16 +486,20 @@ The plugin configuration file is stored here: `btheta_site/Website/plugins.json`
 
     ]
 }
+	
 ```
     
 ### Each plugin requires four fields:
+	
+**_id** -  this is the plugin unique identifier - it be should be assigned a unique HEX number
+	
+**desc**  - the description written below the bold text on the button
 
-    - **_id** this is the plugin unique identifier - it be should be assigned a unique HEX number
-    - **desc** the description written below the bold text on the button
-    - **image_url** URL to the button image
-    - **name** the name in bold on the button
-    
-Each plugin also requires a python script to pass the expression data to the API. These files are stored here: `btheta_site/Website/backend/plugins`. If you would like to create your own, there is a file called `template.py` that you can modify for your own purposes.
+**image_url** - URL to the button image
+
+**name** - the name in bold on the button
+
+> Each plugin also requires a python script to pass the expression data to the API. These files are stored here: `btheta_site/Website/backend/plugins`. If you would like to create your own, there is a file called `template.py` that you can modify for your own purposes.
     
 
 
