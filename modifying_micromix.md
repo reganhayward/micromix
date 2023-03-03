@@ -413,11 +413,43 @@ load_autocomplete_json() {
 ```
 Each element specificaly refers to particular files and filters.
 
-- **this.filters.items.templates** As only one bacteria can be displayed on the site at once, the site will only load the filters for that organism/bacteria - this part of the code points to the active organism/bacteria
-- **["Filter by annotation"]**
-- **["GO Term"]**
-- .items.filter_annotation.source.items = this.pathways.go;
+**this.filters.items.templates** 
 
+Only one bacteria can be displayed on the site at once, the site will only load the filters for that organism/bacteria - this part of the code points to the active organism/bacteria
+
+**["Filter by annotation"]** 
+
+This is the overarching filter name that all functional annotations are stored under in the file `Website/frontend/src/assets/organisms/bacteriaA/filters.json`
+
+For example, in the below snippet, all filter starting with GO and stored under **Filter by annotation** :
+
+```json
+ "functional": {
+      "Filter by annotation": {
+        "GO Terms": {
+          "properties": {
+            "type": "filter",
+            "query": "annotation_code",
+            "code_type": "go_id"
+          },
+          "items": {
+            "filter_annotation": {
+...
+```
+
+
+
+**["GO Term"].items.filter_annotation.source.items**
+
+"GO Term" will be the name displayed in the dropdown box on the site, and the remaining part of the code loads the filter default values that are contained within `filters.json`.
+
+<img width="20%" src="images/filter_by_annotation.png" />
+
+**= this.pathways.go;**
+
+Links to the `pathways.json` file and searches for all the entries under the parent term **go**. The names here need to match exactly. This tells the site to load all the GO entries and make them available for searching when GO Terms is selected. Likewise for other pathways of interest, you will need to add in additional lines to `search_query.vue` and link to the correct sections of the corresponding elements of the linked files.
+
+<br>
 
 ## Adding new visualisation plugins
 
