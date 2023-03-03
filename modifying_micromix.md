@@ -225,7 +225,7 @@ Once the expression (or relevant) files have been generated, they should be save
 b-theta/website/backend/static/
 ```
 
-The corresponding file should then be added as an entry to datasets.json
+The corresponding file should then be added as an entry to `datasets.json`
 
 ```
 b-theta/website/frontend/src/assets/json/datasets.json
@@ -347,7 +347,7 @@ Website/frontend/src/assets/organisms/bacteriaB/pathways.json
 
 Ideally, these files are automatically generated from a script, as they can be quite large and detailed.    
 
-A snippet of pathways.json, showing the first two GO and KEGG entries
+A snippet of `pathways.json`, showing the first two GO and KEGG entries
 ```json
 {
     "go": [
@@ -360,7 +360,7 @@ A snippet of pathways.json, showing the first two GO and KEGG entries
             "name": "cellular_component (GO:0005575)"
         }
         ],
-        "kegg": [
+    "kegg": [
         {
             "id": "bth00010",
             "name": "Glycolysis / Gluconeogenesis (bth00010)"
@@ -396,10 +396,9 @@ Each bacteria is required to have its unique set of filters. This can be a direc
 
 **2) Loading the filters**
 
-The last setp is linking all the existing information we have created/modified in the above steps into the site. This file is stored here:
-```bash
-Website/frontend/src/components/search_query.vue
+The last setp is linking all the existing information we have created/modified in the above steps into the site. This file is stored here: `Website/frontend/src/components/search_query.vue`
 
+```bash
 #Loading functional annotations is achieved from the function
 load_autocomplete_json()
 #This should be lines 335-348 (shown below)
@@ -434,7 +433,6 @@ For example, in the below snippet, all filter starting with GO and stored under 
           },
           "items": {
             "filter_annotation": {
-...
 ```
 
 
@@ -449,6 +447,8 @@ For example, in the below snippet, all filter starting with GO and stored under 
 
 Links to the `pathways.json` file and searches for all the entries under the parent term **go**. The names here need to match exactly. This tells the site to load all the GO entries and make them available for searching when GO Terms is selected. Likewise for other pathways of interest, you will need to add in additional lines to `search_query.vue` and link to the correct sections of the corresponding elements of the linked files.
 
+> If you have added additional functional annotations, of you would like to add/remove current annotations, you can do this within `search_query.vue`. There are comments provided in the <dropdown> tags in the first 200 lines of code to make this process straightforward - basic knowledge of Javascript is required.
+ 
 <br>
 
 ## Adding new visualisation plugins
