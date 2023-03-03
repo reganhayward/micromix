@@ -300,6 +300,119 @@ Src/components/search_query.vue
 Static/gene_annotations.json
 ```
 
+### Gene annotations
+
+Each gene should have a unique identifier, as seen below with BT_0001, BT0002 etc. Depending on the functional annotations that have been extracted, they will be linked and displayed in this file: `gene_annotations.json`. If additional functional annotations are required, they can be added to the script inthe previous section (above), or if specific classifications or categories are required, they can be added manually.
+
+> If you have more then one organism loaded in the site, all genes should be present in this file 
+
+An example of `gene_annotations.json`
+
+```json
+{
+    "BT_0001": {
+        "go_id": [
+            "GO:0003872",
+            "GO:0005524"
+        ],
+        "kegg_pathway_id": [
+            "bth00010"
+        ]
+    },
+    "BT_0002": {
+        "go_id": [
+            "GO:0004148",
+            "GO:0045454",
+            "GO:0050660"
+        ],
+        "kegg_pathway_id": [
+            "bth00010",
+            "bth00020",
+            "bth00260"
+        ]
+    }
+}
+```
+
+### Pathway annotations
+
+All pathway annotations should be linked to each organism/bacteria and their specific genes. For this reason, the underlying pathways are stored within each bacteria's folder. For example:
+```bash
+#Bacteria A
+Website/frontend/src/assets/organisms/bacteriaA/pathways.json
+
+#Baceria B
+Website/frontend/src/assets/organisms/bacteriaB/pathways.json
+```
+
+Ideally, these files are automatically generated from a script, as they can be quite large and detailed.    
+
+A snippet of pathways.json, showing the first two GO and KEGG entries
+```json
+{
+    "go": [
+        {
+            "id": "GO:0003674",
+            "name": "molecular_function (GO:0003674)"
+        },
+        {
+            "id": "GO:0005575",
+            "name": "cellular_component (GO:0005575)"
+        }
+        ],
+        "kegg": [
+        {
+            "id": "bth00010",
+            "name": "Glycolysis / Gluconeogenesis (bth00010)"
+        },
+        {
+            "id": "bth00020",
+            "name": "Citrate cycle (TCA cycle) (bth00020)"
+        }
+        ]
+    }
+```
+
+### Linking functional annotations to the site
+
+Finally, to link the annotations so they can be loaded on the site and filtered, two files need to modified.
+
+```bash
+#1) The filters for each bacteria
+#Bacteria A
+Website/frontend/src/assets/organisms/bacteriaA/filters.json
+
+#Baceria B
+Website/frontend/src/assets/organisms/bacteriaB/filters.json
+
+#2) Loading the filters
+Website/frontend/src/components/search_query.vue
+
+```
+
+**1) Filters for each bacteria**
+
+Each bacteria is required to have its unique set of filters. This can be a direct copy across multiple bacteria, but separate files are required. Within `filters.json`, you can setup and modify all available filters.  
+
+**2) Loading the filters**
+
+The last setp is linking all the existing information we have created/modified in the above steps into the site. This file is stored here:
+```bash
+Website/frontend/src/components/search_query.vue
+
+#Loading functional annotations is achieved from the function
+load_autocomplete_json()
+#This should be lines 335-340 - shown below
+```
+
+```javascript
+load_autocomplete_json() {
+    this.filters.items.templates["Filter by annotation"]["GO Term"].items.filter_annotation.source.items = this.pathways.go;
+    this.filters.items.templates["Filter by annotation"]["KEGG Pathway"].items.filter_annotation.source.items = this.pathways.kegg;
+},
+```
+
+this.filters.items.templates["Filter by annotation"]["GO Term"].items.filter_annotation.source.items = this.pathways.go;
 
 
 ## Adding new visualisation plugins
