@@ -290,21 +290,21 @@ There can be up to four files that may need to be edited, depending on requireme
 #Files associated with gene annotations and pathways
 
 #Frontend - bacteria specific
-Src/assets/organisms/<bacteria>/pathways.json
-Src/assets/organisms/<bacteria>/filters.json
+src/assets/organisms/<bacteria>/pathways.json
+src/assets/organisms/<bacteria>/filters.json
 
 #Frontend - 
-Src/components/search_query.vue
+src/components/search_query.vue
 
 #Backend
-Static/gene_annotations.json
+static/gene_annotations.json
 ```
 
 ### Gene annotations
 
-Each gene should have a unique identifier, as seen below with BT_0001, BT0002 etc. Depending on the functional annotations that have been extracted, they will be linked and displayed in this file: `gene_annotations.json`. If additional functional annotations are required, they can be added to the script inthe previous section (above), or if specific classifications or categories are required, they can be added manually.
+Each gene should have a unique identifier, as seen below with BT_0001, BT0002 etc. Depending on the functional annotations that have been extracted, they will be linked and displayed in this file: `gene_annotations.json`. If additional functional annotations are required, they can be added to the script in the previous section (above), or if specific classifications or categories are required, they can be added manually.
 
-> If you have more then one organism loaded in the site, all genes should be present in this file 
+> **Note:** If you have more then one organism loaded in the site, all genes should be present in this file (you may need to manually add if you have used the script above to generate organism specific gene and pathway annotations
 
 An example of `gene_annotations.json`
 
@@ -345,7 +345,7 @@ Website/frontend/src/assets/organisms/bacteriaA/pathways.json
 Website/frontend/src/assets/organisms/bacteriaB/pathways.json
 ```
 
-Ideally, these files are automatically generated from a script, as they can be quite large and detailed.    
+Ideally, these files are automatically generated from a script, as they can be quite large and detailed. If they have been automatically generated, you can add/replace the existing file. Otherwise, specific entries can be added or modified as required.    
 
 A snippet of `pathways.json`, showing the first two GO and KEGG entries
 ```json
@@ -406,21 +406,21 @@ load_autocomplete_json()
 
 ```javascript
 load_autocomplete_json() {
-    this.filters.items.templates["Filter by annotation"]["GO Term"].items.filter_annotation.source.items = this.pathways.go;
-    this.filters.items.templates["Filter by annotation"]["KEGG Pathway"].items.filter_annotation.source.items = this.pathways.kegg;
+    this.filters.items.functional["Filter by annotation"]["GO Term"].items.filter_annotation.source.items = this.pathways.go;
+    this.filters.items.functional["Filter by annotation"]["KEGG Pathway"].items.filter_annotation.source.items = this.pathways.kegg;
 },
 ```
 Each element specificaly refers to particular files and filters.
 
-**this.filters.items.templates** 
+**this.filters.items.functional** 
 
-Only one bacteria can be displayed on the site at once, the site will only load the filters for that organism/bacteria - this part of the code points to the active organism/bacteria
+The data from only one bacteria can be displayed on the site at once - therefore, the site will load the filters for that organism/bacteria after it has been selected - this part of the code points to the active organism/bacteria and does not need changing.
 
 **["Filter by annotation"]** 
 
-This is the overarching filter name that all functional annotations are stored under in the file `Website/frontend/src/assets/organisms/bacteriaA/filters.json`
+This is the overarching/parent filter name that all functional annotations are stored under in the file `Website/frontend/src/assets/organisms/bacteriaA/filters.json`
 
-For example, in the below snippet, all filter starting with GO and stored under **Filter by annotation** :
+For example, in the below snippet, all filters are stored under **functional** then **Filter by annotation**, then each different functional annotation is declared, here this starts with  **"GO Terms"**:
 
 ```json
  "functional": {
@@ -439,33 +439,63 @@ For example, in the below snippet, all filter starting with GO and stored under 
 
 **["GO Term"].items.filter_annotation.source.items**
 
-"GO Term" will be the name displayed in the dropdown box on the site. The remaining part of the code loads the filter's default values that are contained within `filters.json`.
+**"GO Term"** will be the name displayed in the dropdown box on the site. The remaining part of the code loads the filter's default values that are contained within `filters.json`.
 
 <img width="20%" src="images/filter_by_annotation.png" />
 
 **= this.pathways.go;**
 
-Links to the `pathways.json` file and searches for all the entries under the parent term **go**. The names here need to match exactly. This tells the site to load all the GO entries and make them available for searching when **GO Terms** is selected. Likewise for other pathways of interest, you will need to add in additional lines to `search_query.vue` and link to the correct sections of the corresponding elements of the linked files.
+Links to the `pathways.json` file and searches for all the entries under the parent term **go**. The names here need to match exactly. This tells the site to load all the GO entries and make them available for searching when **GO Terms** is selected in the dropdown menu. Likewise for other pathways of interest, you will need to add additional lines in to `search_query.vue` and link to the correct sections of the corresponding elements of the linked files.
 
-> If you have added additional functional annotations, of you would like to add/remove current annotations, you can do this within `search_query.vue`. There are comments provided in the <dropdown> tags in the first 200 lines of code to make this process straightforward - basic knowledge of Javascript is required.
- 
+
+> If you have added additional functional annotations, or if you would like to add/remove current annotations from the dropdown menus - you can do this within `search_query.vue`. There are comments provided in the <dropdown> tags in the first 200 lines of code to make this process straightforward - basic knowledge of Javascript is required.
+
 <br>
 
 ## Adding new visualisation plugins
 
-**<< work in progress >>**
 
-Buttons can do many things,
+Plugin buttons can be programmed to load visualisations, or link to other webpages, such as genome browser tracks as applied here [b-theta DB](http://micromix.helmholtz-hiri.de/).
+    
+The default approach for a visualisation plugin is to pass the expression values to an API which returns the desired visualisation and is displayed within the site. 
 
- - Link to a different API - clustergrammer
- - Link to website - jbrowse
- - Link to a custom API - heatmap
+The plugin configuration file is stored here: `btheta_site/Website/plugins.json`
+    
+```json
+{
+    "plugins": [
+        {
+            "_id": "khds8fohoduskfi7syf99",
+            "desc": "2D and 3D heatmap",
+            "image_url": "https://raw.githubusercontent.com/reganhayward/micromix/main/frontend/src/assets/heatmap_hiri_logo.svg",
+            "name": "Heatmap"
+        },
+	{
+            "_id": "5f984ac1b478a2c8653ed827",
+            "desc": "Clustered heatmap by the Ma'ayan Laboratory (Max 200 genes per query)",
+            "image_url": "https://raw.githubusercontent.com/reganhayward/micromix/main/backend/plugins/clustergrammer.svg",
+            "name": "Clustergrammer"
+        },
+	{
+            "_id": "khds8fohoduskfi7syf91",
+            "desc": "Click to open new tab containing genome tracks",
+            "image_url": "https://raw.githubusercontent.com/reganhayward/micromix/main/frontend/src/assets/jbrowse.png",
+            "name": "JBrowse"
+        }
 
-Info stored in [  ] and should be assigned a unique HEX number, such as xxx.
+    ]
+}
+```
+    
+### Each plugin requires four fields:
 
-Each plugin is stored in [  ]. Open the corresponding files to examine how information is parsed.
-
-
+    - **_id** this is the plugin unique identifier - it be should be assigned a unique HEX number
+    - **desc** the description written below the bold text on the button
+    - **image_url** URL to the button image
+    - **name** the name in bold on the button
+    
+Each plugin also requires a python script to pass the expression data to the API. These files are stored here: `btheta_site/Website/backend/plugins`. If you would like to create your own, there is a file called `template.py` that you can modify for your own purposes.
+    
 
 
 ## How to deploy on a server and config files – nginx and gunicorn
