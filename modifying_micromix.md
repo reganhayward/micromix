@@ -411,8 +411,12 @@ load_autocomplete_json() {
     this.filters.items.templates["Filter by annotation"]["KEGG Pathway"].items.filter_annotation.source.items = this.pathways.kegg;
 },
 ```
- - this.filters.items.templates
-this.filters.items.templates["Filter by annotation"]["GO Term"].items.filter_annotation.source.items = this.pathways.go;
+Each element specificaly refers to particular files and filters.
+
+- **this.filters.items.templates** As only one bacteria can be displayed on the site at once, the site will only load the filters for that organism/bacteria - this part of the code points to the active organism/bacteria
+- **["Filter by annotation"]**
+- **["GO Term"]**
+- .items.filter_annotation.source.items = this.pathways.go;
 
 
 ## Adding new visualisation plugins
