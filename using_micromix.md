@@ -23,9 +23,9 @@
 
 # Using Micromix
 
-This is a breif guide for highlight the functionality of the Micromix website. 
+This is a brief guide for highlighting the functionality of the Micromix website. 
 
-The site was developed to be adaptable for use with multiple organisms and datasets that can be viewed through available plugins. New organisms/datasets can be added or removed, and plugins can be designed and added for additional visualisation options.
+The site was developed to be adaptable for use with multiple organisms and datasets, with the resulting data to be viewed through available plugins. New organisms/datasets can be added or removed as required - and plugins can be designed and added for additional visualisation options.
 
 
 ## Selecting organism
@@ -67,7 +67,7 @@ On the top right of the website there is a toolbar with four buttons.
 
 ### Plugins / visualisations:
 
-This is where the data visualisation plugins are loaded as separate buttons. Each plugin when clicked will use allow the user to visualise their data. Additional plugins can be created and added. For details on how to add new plugins, see **<< link to section >>** 
+This is where the data visualisation plugins are loaded as separate buttons. Each plugin when clicked will allow the user to visualise their data. Additional plugins can be created and added. For details on how to add new plugins, see [Adding new visualisation plugins](modifying_micromix.md#adding-new-visualisation-plugins) 
 
 ### Filters:
 
@@ -79,15 +79,13 @@ Standard filters exist allowing functional annotations to be searched, such as G
 
 As discussed above, there is the option of filtering the entire list of genes into categories of interest.
 
- - The functional annotation filters allow you to type the beginning of a category/pathway and the closest matches appear in the dropdown menu (although only 10 are initially visible, additional can be viewed by scrolling). Functional annotations can be modified as described here **<< insert link >>**
+ - The functional annotation filters allow you to type the beginning of a category/pathway and the closest matches appear in the dropdown menu (although only 10 are initially visible, additional categories/pathways can be viewed by scrolling). Functional annotations and filters can be modified as described here: [Modifying or adding gene or pathway annotations](modifying_micromix.md#modifying-or-adding-gene-or-pathway-annotations)
 
 **<< insert image >>**
 
  - Filters can either be a singular, or chained together
 
 **<< insert image >>**
-
- - All filters can be modified, click here to read more **<< insert link >>**
 
 <br>
 
@@ -97,18 +95,22 @@ There are currently 3 visualisation plugins available, Heatmap, Clustergrammer a
 
 ### Heatmap
 
-This is the heatmap that is required to be run alongside the website. It was designed with WebGL, providing 3D and 2D views of the resulting heatmap. It is highly customisable and provides an option to export the heatmap as an image. An advantage of this plugin is its speed and ability to easily visualise many genes and samples.
+This is the heatmap that is required to be run alongside the website. It was designed with WebGL, providing 3D and 2D views of the resulting data. The visualisation options are highly customisable and it also provides an option to export the heatmap as an image. An advantage of this plugin is its speed and ability to easily visualise many genes and samples.
 
-If the heatmap is not working, you may need to make sure it has been deployed correctly - see **<< insert link >>**
+If the heatmap is not working, you may need to make sure it has been deployed correctly - see [Heatmap](installing_running.md#heatmap)
 
 <img width="80%" src="images/heatmap.png" />
 
+### Clustergrammer
+
 The Clustergrammer plugin utalises the API from the Ma'ayan lab, passing the requested data and returning an interractive heatmap. Here you can utalise features such as row and column clustering, as well as exporting the heatmap as an image. 
 
-> It should be noted that < 200 genes should be used for visualisations (an inbuilt restriction), otherwise an error may occur 
+> It should be noted that < 200 genes should be used for visualisations (an in-built restriction built into the API), otherwise an error may occur. If you require larger datasets, there is an option of deploying your own [Clustergrammer server](https://maayanlab.cloud/clustergrammer/) 
 
 <img width="80%" src="images/clustergrammer.png" />
 
-Scatterplot
+### Scatterplot
 
 **<< TBD >>**
+
+Hannah, I'm unsure if this will be kept in the final version - curious to know if you find the scatterplot useful?
