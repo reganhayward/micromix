@@ -81,11 +81,11 @@ As discussed above, there is the option of filtering the entire list of genes in
 
  - The functional annotation filters allow you to type the beginning of a category/pathway and the closest matches appear in the dropdown menu (although only 10 are initially visible, additional categories/pathways can be viewed by scrolling). Functional annotations and filters can be modified as described here: [Modifying or adding gene or pathway annotations](modifying_micromix.md#modifying-or-adding-gene-or-pathway-annotations)
 
-**<< insert image >>**
+<img width="80%" src="images/searching_for_oxidative.png" />
 
  - Filters can either be a singular, or chained together
 
-**<< insert image >>**
+<img width="80%" src="images/multiple_filters.png" />
 
 <br>
 
