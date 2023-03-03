@@ -439,13 +439,13 @@ For example, in the below snippet, all filter starting with GO and stored under 
 
 **["GO Term"].items.filter_annotation.source.items**
 
-"GO Term" will be the name displayed in the dropdown box on the site, and the remaining part of the code loads the filter default values that are contained within `filters.json`.
+"GO Term" will be the name displayed in the dropdown box on the site. The remaining part of the code loads the filter's default values that are contained within `filters.json`.
 
 <img width="20%" src="images/filter_by_annotation.png" />
 
 **= this.pathways.go;**
 
-Links to the `pathways.json` file and searches for all the entries under the parent term **go**. The names here need to match exactly. This tells the site to load all the GO entries and make them available for searching when GO Terms is selected. Likewise for other pathways of interest, you will need to add in additional lines to `search_query.vue` and link to the correct sections of the corresponding elements of the linked files.
+Links to the `pathways.json` file and searches for all the entries under the parent term **go**. The names here need to match exactly. This tells the site to load all the GO entries and make them available for searching when **GO Terms** is selected. Likewise for other pathways of interest, you will need to add in additional lines to `search_query.vue` and link to the correct sections of the corresponding elements of the linked files.
 
 > If you have added additional functional annotations, of you would like to add/remove current annotations, you can do this within `search_query.vue`. There are comments provided in the <dropdown> tags in the first 200 lines of code to make this process straightforward - basic knowledge of Javascript is required.
  
