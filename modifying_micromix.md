@@ -122,8 +122,8 @@ To generate the transcriptome, you need to decide which features to use. For exa
 generate_transcriptome.py \
 -fasta salmonella_sl1344.fa \
 -gff salmonella_sl1344.gff3 \
--f ["CDS", "ncRNA", "pseudogene"] -a gene_id \
--o salmonella_sl1344.fa
+-f ["gene", "ncRNA_gene", "pseudogene"] -a gene_id \
+-o salmonella_sl1344_transcripts.fa
 ```
 
 > Note: Bacterial genome annotations (.gff/.gtf) can be challenging to work with due to non-uniformity, duplicate gene names and many other issues. You may receive an error message saying that some genes are duplicated, and thus a transcriptome couldn't be created. If this happens, open the .gff file and manually change the locus_tags or gene identifier you have chosen. For example, if there are multiple SL1344_0010, change to SL1344_0010a and SL1344_0010b, then re-run.
