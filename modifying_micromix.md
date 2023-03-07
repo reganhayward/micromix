@@ -169,7 +169,7 @@ pathways.json
 
 If you are adding a new organism, you will need to add a new entry to `datasets.json` 
 
-If you are modifying an existing bacteria/organism, there should already be an entry, which no action is required 
+If you are modifying an existing bacteria/organism, there should already be an entry, for which no action is required 
 
 ```
 b-theta/website/frontend/src/assets/json/organisms.json
