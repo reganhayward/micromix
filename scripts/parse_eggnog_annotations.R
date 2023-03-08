@@ -30,6 +30,8 @@ if (length(args)==0) {
 #------------------------------------------
 
 
+#If you have troubles installing R and BiocManager on Ubuntu
+#Try this link: https://linuxize.com/post/how-to-install-r-on-ubuntu-20-04/
 
 #BiocManager
 if (!require("BiocManager", quietly = TRUE))
