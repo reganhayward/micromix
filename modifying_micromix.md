@@ -158,7 +158,7 @@ R --version
 
 #When running, you need to provide the eggNOG annotation file as shown
 #The resulting output files will be saved in the current directory
-./Rscript parse_eggnog_annotations.R eggnog_annotations.csv
+Rscript parse_eggnog_annotations.R eggnog_annotations.csv
 
 #After running, you should have the following two new files:
 gene_annotations.json
