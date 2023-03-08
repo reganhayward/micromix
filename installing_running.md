@@ -91,6 +91,8 @@ sudo systemctl start mongodb
 sudo apt update
 sudo apt install python3-pip
 pip3 install wheel
+pip3 install biopython
+
 #to allow virtual env (check python version first)
 sudo apt-get install python3.8-venv 
 
