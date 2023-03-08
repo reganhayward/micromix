@@ -126,6 +126,7 @@ cd Micromix/Website/frontend
 
 #Make sure dependencies are already installed
 sudo apt-get install gcc g++ make
+sudo apt-get install libssl-dev libcurl4-openssl-dev
 
 #Download and install Node.js
 sudo apt install curl
