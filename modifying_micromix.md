@@ -150,7 +150,11 @@ To do this, you will need to run the following
 #The script is located here 
 /scripts/parse_eggnog_annotations.R
 
-#R will need to be installed on your machine for this to execute successfully
+#R will need to be installed on your machine for this to execute successfully, type the following to make sure (you should receive a version number
+R --version
+
+#If you have trouble installing R and BiocManager on Ubuntu
+#Try this link: https://linuxize.com/post/how-to-install-r-on-ubuntu-20-04/
 
 #When running, you need to provide the eggNOG annotation file as shown
 #The resulting output files will be saved in the current directory
