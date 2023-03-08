@@ -68,19 +68,16 @@ print_colour("...\n", "white")
 
 
 #Load
-#setwd("G:\\My Drive\\Science\\Hemholtz\\Micromix\\Example_annotation_and_code")
-#setwd("/home/r/Desktop/test_eggnog")
+
 #Process
 #eggnog_full = read_delim("MM_upz4vuqy.emapper.annotations.tsv", skip = 4, delim = "\t", comment = "##")
 eggnog_full = read_delim(args[1], skip = 4, delim = "\t", comment = "##", show_col_types = F)
-#dim(eggnog_full)
-#View(eggnog_full)
 
 
 #--
 #Get all KEGG IDs
 #--
-all_kegg_ids = cSplit(eggnog_full, sep = ",", direction = "long", splitCols = "KEGG_Pathway")
+all_kegg_ids = cSplit(eggnog_full, sep = ",", direction = "long", splitCols = "KEGG_Pathway", type.convert = F)
 #remove duplicates
 all_unique_kegg_ids = unique(all_kegg_ids$KEGG_Pathway)
 #remove "-
@@ -93,7 +90,7 @@ all_unique_kegg_ids = all_unique_kegg_ids[!is.na(all_unique_kegg_ids)]
 #--
 #Get all GO IDs
 #--
-all_go_ids = cSplit(eggnog_full, sep = ",", direction = "long", splitCols = "GOs")
+all_go_ids = cSplit(eggnog_full, sep = ",", direction = "long", splitCols = "GOs", type.convert = F)
 #remove duplicates
 all_unique_go_ids = unique(all_go_ids$GOs)
 #remove "-
