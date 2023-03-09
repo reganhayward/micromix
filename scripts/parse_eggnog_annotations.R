@@ -215,9 +215,13 @@ eggnog_short = eggnog_full[,c(1,10,12)]
 #replace "-" with nothing
 eggnog_short[] <- lapply(eggnog_short, function(x) gsub("[-]", "", x))
 #update col names 
-colnames(eggnog_short) = c("ID","go_id","kegg_pathway_id")
+colnames(eggnog_short) = c("ID","go_id","kegg_id")
 
+#Each GO and KEGG term need to have " " around them 
+eggnog_short$go_id = gsub(',GO:', "\",\"GO:", eggnog_short$go_id)
+eggnog_short$kegg_id = gsub(',ko:', "\",\"ko:", eggnog_short$kegg_id)
 
+                         
 #--
 # Loop through all genes and link up the GO and KEGG ids/pathways
 #--
@@ -230,7 +234,7 @@ names(j) = eggnog_short$ID
 #loop through each of the genes, linking up the pathways
 for (i in 1:dim(eggnog_short)[1]) {
   #get the kegg IDs associated with gene
-  j[[i]] = as.list(data.frame("kegg_pathway_id" = eggnog_short[eggnog_short$ID == names(j[i]),"kegg_pathway_id"],
+  j[[i]] = as.list(data.frame("kegg_id" = eggnog_short[eggnog_short$ID == names(j[i]),"kegg_id"],
                               "go_id" = eggnog_short[eggnog_short$ID == names(j[i]),"go_id"]))
   
 }
@@ -241,7 +245,7 @@ gene_annotations_json = jsonlite::toJSON(j, pretty = T, auto_unbox = F)
 
 #Genes where there are no GO ids or KEGG ids by default are shown as [""].
 #For error free parsing on the site, we change to []
-gene_annotations_json = gsub('kegg_pathway_id": [\""]', 'kegg_pathway_id": []', gene_annotations_json, fixed = T)
+gene_annotations_json = gsub('kegg_id": [\""]', 'kegg_id": []', gene_annotations_json, fixed = T)
 gene_annotations_json = gsub('go_id": [\""]', 'go_id": []', gene_annotations_json, fixed = T)
 
 print_colour("Step: 5/6 - Preparing gene_annotations.json -- DONE \n", "green")
