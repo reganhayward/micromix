@@ -165,7 +165,7 @@ gene_annotations.json
 pathways.json
 
 #gene annotations requires a quick tidy up (removing redundant /'s)
-sed 's/\\//g' gene_annotations.json > gene_annotations.json
+sed -i 's/\\//g' gene_annotations.json
 
 ```
 
