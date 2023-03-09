@@ -300,7 +300,7 @@
               "options": ["any column", "all columns"],
               "default_options": ["any column", "all columns"],
               "id": "filter_annotation_area",
-              "selected": "any column"
+              "selected": "locus tag"
             }
           }
         },
@@ -327,7 +327,7 @@
               "options": ["any column", "all columns"],
               "default_options": ["any column", "all columns"],
               "id": "filter_annotation_area",
-              "selected": "any column"
+              "selected": "locus tag"
             }
           }
         },
@@ -354,7 +354,7 @@
               "options": ["any column", "all columns"],
               "default_options": ["any column", "all columns"],
               "id": "filter_annotation_area",
-              "selected": "any column"
+              "selected": "locus tag"
             }
           }
         }
