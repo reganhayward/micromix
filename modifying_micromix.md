@@ -341,6 +341,7 @@ An example of `gene_annotations.json`
     }
 }
 ```
+> If you have multiple organisms/strains that are to be loaded in the site, you will need to have all gene IDs in this file. Currently, you will manually need to do this by copying the output from `gene_annotations.json` from each organism and making a single file that the site can use. 
 
 ### Pathway annotations
 
