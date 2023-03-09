@@ -163,6 +163,10 @@ Rscript parse_eggnog_annotations.R eggnog_annotations.csv
 #After running, you should have the following two new files:
 gene_annotations.json
 pathways.json
+
+#gene annotations requires a quick tidy up (removing redundant /'s)
+sed 's/\\//g' gene_annotations.json > gene_annotations.json
+
 ```
 
 > The script `parse_eggnog_annotations.R` can be modified to extract and link additional functional annotations, currently it only extracts GO and KEGG IDs linking pathway names with these IDs. If required, you will need to find an R package or API that can provide the description of the interested IDs. 
