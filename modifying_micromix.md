@@ -310,7 +310,7 @@ static/gene_annotations.json
 
 This image represents the general structure how filters are linked to a pathway and that pathway contains genes that can be searched for. The site allows any type of pathway or functional annotation to be added, as long as it can follow this structure.
 
-<img width="80%" src="images/filters_pathways_gene.png" />
+<img width="85%" src="images/filters_pathways_genes.png" />
 
 
 ### Gene annotations
