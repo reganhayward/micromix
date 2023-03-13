@@ -308,6 +308,11 @@ src/components/search_query.vue
 static/gene_annotations.json
 ```
 
+This image represents the general structure how filters are linked to a pathway and that pathway contains genes that can be searched for. The site allows any type of pathway or functional annotation to be added, as long as it can follow this structure.
+
+<img width="80%" src="images/filters_pathways_gene.png" />
+
+
 ### Gene annotations
 
 Each gene should have a unique identifier, as seen below with BT_0001, BT0002 etc. Depending on the functional annotations that have been extracted, they will be linked and displayed in this file: `gene_annotations.json`. If additional functional annotations are required, they can be added to the script in the previous section (above), or if specific classifications or categories are required, they can be added manually.
