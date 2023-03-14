@@ -55,16 +55,6 @@ Clicking **Add** will load the data
 
 The above image shows main elements of the site once data has been added. 
 
-## Combining datasets
-
-If you choose to examine more than one dataset, you can merge the underlying data into a single matrix that is displayed and thus explorable within the site. To use this feature, you need to already have a dataset chosen (by following the previous step). First click on **Upload data**, this will allow you to select the additional dataset you wish to combine with your existing selection. 
-
-After selecting an additional dataset, you can choose if this additional should be added to the right or left. THis is shown in the figure below with the black squared matrix. By clicking on the light grey squares (on either side), this decides where the new data will be added.
-
-<img width="80%" src="images/site_descriptionsaa.png" />
-
-> Note: When merging datasets, there needs to be sufficiant overlap in the **locus tags**, if both datasets using different naming conventions, then the merge will fail. Other common pitfalls are not having the locus tag identifier in exactly the same format. For example, `locus tag` and `locus_tag` will cause an error. If this occurs, you will need to change the columns in the originating data to be identical, which is described here: [How to add new expression data](modifying_micromix.md#how-to-add-new-expression-data)
-
 ### Address bar:
 
 Each time new data is selected, a new database entry is added and assigned a unique ID. This configuration ID is added to the address bar and links the current session, storing any data transformations, filtering and visualisations. This becomes useful when revisiting the site and instead of re-loading data and applying filters, the config ID can be pasted into the address bar and the existing session will be restored. This link can also be shared with collaborators, providing an easy way to share interesting results or observations.
@@ -86,6 +76,16 @@ This is where the data visualisation plugins are loaded as separate buttons. Eac
 ### Filters:
 
 Standard filters exist allowing functional annotations to be searched, such as Gene Ontology (GO) and KEGG IDs - these are available under **Add Filter**. Custom gene lists such as virulence factors/ncRNA etc can also be added to select genes of interest - these are available under **Preset Filters**. Values within the table can also be modified, such as converting to Log, or displaying certain nummber of decimal places - these are available under **Transform Data**. 
+
+## Combining datasets
+
+If you choose to examine more than one dataset, you can merge the underlying data into a single matrix that is displayed and thus explorable within the site. To use this feature, you need to already have a dataset chosen (by following the previous step). First click on **Upload data**, this will allow you to select the additional dataset you wish to combine with your existing selection. 
+
+After selecting an additional dataset, you can choose if this additional data should be added to the right or left. This is shown in the figure below with the black squared matrix. By clicking on the light grey squares (on either side), this decides where the new data will be added.
+
+<img width="80%" src="images/site_descriptionsaa.png" />
+
+> Note: When merging datasets, there needs to be sufficiant overlap in the **locus tags**, if both datasets use different naming conventions, then the merge will fail. Other common pitfalls are not having the locus tag identifier in exactly the same format. For example, `locus tag` and `locus_tag` will cause an error. If this occurs, you will need to change the columns in the originating data to be identical, which is described here: [How to add new expression data](modifying_micromix.md#how-to-add-new-expression-data)
 
 <br>
 
