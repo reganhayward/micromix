@@ -34,6 +34,8 @@ The first page allows you to select one of the available organisms/bacteria.
 
 <img width="80%" src="images/micromix_running.png" />
 
+## Selecting datasets
+
 Once chosen, you have the option of selecting the desired datasets.
 
 You can also choose to load in custom data from other sources such as delimited file or URL
@@ -50,6 +52,16 @@ Clicking **Add** will load the data
 <img width="80%" src="images/site_descriptions.png" />
 
 The above image shows main elements of the site once data has been added. 
+
+## Combining datasets
+
+If you choose to examine more than one dataset, you can merge the underlying data into a single matrix that is displayed and thus explorable within the site. To use this feature, you need to already have a dataset chosen (by following the previous step). First click on **Upload data**, this will allow you to select the additional dataset you wish to combine with your existing selection. 
+
+After selecting an additional dataset, you can choose if this additional should be added to the right or left. THis is shown in the figure below with the black squared matrix. By clicking on the light grey squares (on either side), this decides where the new data will be added.
+
+<img width="80%" src="images/site_descriptionsaa.png" />
+
+> Note: When merging datasets, there needs to be sufficiant overlap in the **locus tags**, if both datasets using different naming conventions, then the merge will fail. Other common pitfalls are not having the locus tag identifier in exactly the same format. For example, `locus tag` and `locus_tag` will cause an error. If this occurs, you will need to change the columns in the originating data to be identical, which is described here: [How to add new expression data](modifying_micromix.md#how-to-add-new-expression-data)
 
 ### Address bar:
 
