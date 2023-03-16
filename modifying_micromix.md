@@ -179,7 +179,7 @@ sed -i 's/\\//g' gene_annotations.json
 
 If you are adding a new organism, you will need to add a new entry to `datasets.json`. 
 
-If you are modifying an existing bacteria/organism, there should already be an entry, which requires no action. 
+If you are modifying an existing bacteria/organism, there should already be an entry, which requires no action. However, in any case you will need to link the new organism to the expression data - see the next section.
 
 ```
 b-theta/website/frontend/src/assets/json/organisms.json
@@ -235,14 +235,14 @@ Once the expression (or relevant) files have been generated, they should be save
 b-theta/website/backend/static/
 ```
 
-The corresponding file should then be added as an entry to `datasets.json`
+The corresponding file should then be added as an entry to `datasets.json`.
 
 ```
 b-theta/website/frontend/src/assets/json/datasets.json
 
 ```
 
-Each new entry requires all the fields presented here, such as `text`, `value` and `separator`. The new entry here is called **New dataset** and is linked to the file **new_data.tsv** that should have previously been saved.
+Each new entry requires all the fields presented here, such as `text`, `value` and `separator`. The new dataset can be added to an existing entry or be added as a completely new entry. Here the new dataset, called **New dataset**, is added to an existing entry ("Bacteria A RNA-seq") and is linked to the file **new_data.tsv** that should have previously been saved. 
 
 ```json
 {
@@ -266,12 +266,20 @@ Each new entry requires all the fields presented here, such as `text`, `value` a
                   "pre_selected_columns": ["locus tag", "Name", "Condition 1 logFC"]},
         "seperator": "\t"
       }
-
     ]
   }
 }
 ```
+If the dataset is not linked to an existing entry, e.g. data from a new study. One needs to add the name of the dataset to the organism.json file of the organism of interest (see previous steps). Here **DNA sequencing data** represents the added dataset.
+```
+ "Bacteria A": {
+      "name": "Bacteria A",
+      "description": "Manually select datasets.",
+      "path": "/bacteriaA",
+      "id": "bacteria-a-e2ad6b25-40cb-4594-8685-f4fcb3ceb0e7",
+      "datasets": ["Bacteria A RNA-seq", "DNA sequencing data"]
 
+```
 Here is a brief description of the file contents:
 
 `"Bacteria A RNA-seq":` - The is the bold value that cannot be selected in the dropdown menu when selecting a new dataset
