@@ -177,7 +177,7 @@ sed -i 's/\\//g' gene_annotations.json
 
 ## How to add a new organism
 
-If you are adding a new organism, you will need to add a new entry to `datasets.json` 
+If you are adding a new organism, you will need to add a new entry to `datasets.json`. 
 
 If you are modifying an existing bacteria/organism, there should already be an entry, which requires no action. 
 
