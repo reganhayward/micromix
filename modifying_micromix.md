@@ -144,9 +144,9 @@ After a short time, you will receive another email providing a download link. Th
 
 ### **Step 4:**
 
-The last step is extracting out the required information from the eggNOG output and saving to a compatible format for Micromix (.json files)
+The last step is extracting the required information from the eggNOG output and saving it to a compatible format for Micromix (.json files).
 
-To do this, you will need to run the following
+To do so, you will need to run the following:
 
 ```bash
 #The script is located here 
