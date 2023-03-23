@@ -242,7 +242,7 @@ b-theta/website/frontend/src/assets/json/datasets.json
 
 ```
 
-Each new entry requires all the fields presented here, such as `text`, `value` and `separator`. The new dataset can be added to an existing entry or be added as a completely new entry. Here the new dataset, called **New dataset**, is added to an existing entry ("Bacteria A RNA-seq") and is linked to the file **new_data.tsv** that should have previously been saved. 
+Each new entry requires all the fields presented here, such as `text`, `value` and `separator`. The new dataset can be added to an existing entry or be added as a completely new entry. Here the new dataset, called **New dataset**, is added to an existing entry ("Bacteria A RNA-seq") and is linked to the file **new_data.tsv**. 
 
 ```json
 {
