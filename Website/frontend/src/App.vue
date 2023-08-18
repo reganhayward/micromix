@@ -97,6 +97,7 @@
               <plugins
                 @click.native="select_plugin(plugin)"
                 :active_plugin="active_plugin_id"
+                :active_vis_link="active_vis_link"
                 v-for="plugin in config.plugins"
                 :key="plugin.name"
                 :title="plugin.name"
@@ -227,7 +228,7 @@ export default {
       },
       config: null,
       active_plugin_id: null,
-      active_vis_link: "",
+      active_vis_link: null,
       error: null,
       filtered: false,
       initializing: true,
@@ -269,7 +270,8 @@ export default {
     },
     select_plugin(plugin) {
       if (this.config.active_matrices.length > 0) {
-        this.active_vis_link = "";
+        this.active_vis_link = null;
+        this.active_plugin_id = null;
         if (plugin._id != this.active_plugin_id) {
           this.active_plugin_id = plugin._id;
           let vis_exists = false;
@@ -333,7 +335,6 @@ export default {
     load_config() {
       this.loading.state = true;
       this.loading.increment = 5;
-      // this.active_plugin_id = null;
       this.active_vis_link = null;
       this.config = null;
       const path = `${this.backend_url}/config`;
@@ -355,7 +356,6 @@ export default {
             this.$nextTick(() => {
               this.loading.state = false;
               this.initializing = false;
-              console.log(this.config);
             });
           }
         })
@@ -400,7 +400,6 @@ export default {
       if (this.config._id == res.data.db_entry_id["$oid"]) {
         // this.$router.go()
         this.active_vis_link = null;
-        this.active_plugin_id = null;
         this.load_config();
         console.log(this.config);
       } else {

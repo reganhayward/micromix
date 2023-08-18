@@ -29,6 +29,7 @@ export default {
     desc: String,
     image_url: String,
     active_plugin: String,
+    active_vis_link: String,
     id: String
   },
   data() {
@@ -41,6 +42,11 @@ export default {
       handler() {
         this.toggle_selected();
       }
+    },
+    active_vis_link: {
+      handler() {
+        this.toggle_selected();
+      }
     }
   },
   methods: {
@@ -48,7 +54,7 @@ export default {
       this.$emit("plugin_selected")
     },
     toggle_selected() {
-      if (this.id == this.active_plugin) {
+      if (this.id == this.active_plugin && this.active_vis_link != null) {
         this.isSelected = true;
       } else {
         this.isSelected = false;
@@ -56,7 +62,7 @@ export default {
     }
   },
   created() {
-    if (this.id == this.active_plugin) {
+    if (this.id == this.active_plugin && this.active_vis_link != null) {
       this.$emit("plugin_selected")
     }
     this.toggle_selected();
