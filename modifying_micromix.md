@@ -327,7 +327,7 @@ This image represents the general structure how filters are linked to a pathway 
 
 Each gene should have a unique identifier, as seen below with BT_0001, BT0002 etc. Depending on the functional annotations that have been extracted, they will be linked and displayed in this file: `gene_annotations.json`. If additional functional annotations are required, they can be added to the script in the previous section (above), or if specific classifications or categories are required, they can be added manually.
 
-> **Note:** If you have more then one organism loaded in the site, all genes should be present in this file (you may need to manually add if you have used the script above to generate organism specific gene and pathway annotations
+> **Note:** If you have more then one organism loaded in the site, all genes should be present in this file. You will need to manually add the contents from both organisms `gene_annotations.json` into a single file. No additional code specifying which organism the ID links to is needed. The site looks in this file and searches through all IDs independently to which organism is selected. 
 
 An example of `gene_annotations.json`
 
