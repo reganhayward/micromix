@@ -38,6 +38,7 @@ if (length(args)==0) {
 if (!require("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 
+#keeping if needed
 #BiocManager::install("httr")
 #BiocManager::install("GO.db")
 #BiocManager::install("KEGGREST")
@@ -70,7 +71,6 @@ print_colour("...\n", "white")
 #Load
 
 #Process
-#eggnog_full = read_delim("MM_upz4vuqy.emapper.annotations.tsv", skip = 4, delim = "\t", comment = "##")
 eggnog_full = read_delim(args[1], skip = 4, delim = "\t", comment = "##", show_col_types = F)
 
 
@@ -132,6 +132,12 @@ go_id_and_pathway$go_id_v2 = gsub("\\..*","",go_id_and_pathway$go_id)
 #removing rows with NAs
 go_id_and_pathway = na.omit(go_id_and_pathway)
 
+#add the GO id in brackets to the pathway 
+go_id_and_pathway$go_pathway = paste0(go_id_and_pathway$go_pathway, " (", go_id_and_pathway$go_id_v2, ")")
+
+#capitalise the first letter
+go_id_and_pathway$go_pathway = paste0(toupper(substr(go_id_and_pathway$go_pathway, 1, 1)), substr(go_id_and_pathway$go_pathway, 2, nchar(go_id_and_pathway$go_pathway)))
+
 print_colour("Step: 2/6 - Linking GO ids with pathways -- DONE \n", "green")
 
 
@@ -164,6 +170,17 @@ kegg_id_and_pathway_df = data.frame("name" = unname(kegg_id_and_pathway),
 #kegg_id_and_pathway_df[is.na(kegg_id_and_pathway_df),] <- ""
 kegg_id_and_pathway_df = na.omit(kegg_id_and_pathway_df)
 
+#Remove duplicate pathway entries (because KEGG has mapxxx and KOxxx entries)
+dim(kegg_id_and_pathway_df)
+dim(kegg_id_and_pathway_df[duplicated(kegg_id_and_pathway_df$name),])
+kegg_id_and_pathway_df = kegg_id_and_pathway_df[!duplicated(kegg_id_and_pathway_df$name),]
+dim(kegg_id_and_pathway_df)
+
+#add the KEGG id in brackets to the pathway 
+kegg_id_and_pathway_df$name = paste0(kegg_id_and_pathway_df$name, " (", kegg_id_and_pathway_df$id, ")")
+
+
+                                                                                     
 print_colour("Step: 3/6 - Linking KEGG ids with pathways -- DONE \n", "green")
 
 
@@ -211,7 +228,7 @@ print_colour("...\n", "white")
 
 
 #Shrink the full eggNOG annotation file to just keep cols of interest
-eggnog_short = eggnog_full[,c(1,10,12)]
+eggnog_short = eggnog_full[,c(1,10,13)]
 #replace "-" with nothing
 eggnog_short[] <- lapply(eggnog_short, function(x) gsub("[-]", "", x))
 #update col names 
@@ -219,7 +236,9 @@ colnames(eggnog_short) = c("ID","go_id","kegg_id")
 
 #Each GO and KEGG term need to have " " around them 
 eggnog_short$go_id = gsub(',GO:', "\",\"GO:", eggnog_short$go_id)
-eggnog_short$kegg_id = gsub(',ko:', "\",\"ko:", eggnog_short$kegg_id)
+
+eggnog_short$kegg_id = gsub(',ko', "\",\"ko", eggnog_short$kegg_id)
+eggnog_short$kegg_id = gsub(',map', "\",\"map", eggnog_short$kegg_id)
 
                          
 #--
